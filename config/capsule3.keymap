@@ -30,9 +30,7 @@
 #define LCTRD    &hrm LCTRL D
 #define LALTT    &hrm LALT T
 #define MSEH     &lt MSE H
-#define SNPN     &lt SNP N
 #define SNPL     &mo SNP
-#define FSTL     &mo FST
 
 #define MIN   &kp MINUS
 #define BSP   &kp BSPC
