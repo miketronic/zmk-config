@@ -29,5 +29,8 @@ manifest:
     - name: zmk-keyboards-capsule3
       remote: miketronic
       revision: main
+    - name: zmk-keyboards-10x2
+      remote: miketronic
+      revision: main
   self:
     path: config
