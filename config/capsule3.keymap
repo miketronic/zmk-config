@@ -65,11 +65,11 @@
 &mmv_input_listener {
         snipe {
             layers = <SNP>;
-            input-processors = <&zip_xy_scaler 1 3>;
+            input-processors = <&zip_xy_scaler 1 2>;
         };
         standard {
             layers = <MSE>;
-            input-processors = <&zip_xy_scaler 2 1>;
+            input-processors = <&zip_xy_scaler 3 1>;
         };
 };
 
@@ -81,7 +81,7 @@
 
         default_layer {
             bindings = <
-                &tdW         &kp F   &lt NUM G          &kp M       &kp L   &kp U
+                &tdW         &kp F   &lt NUM G          &kp M      &kp L   &kp U
                 &lt MAC A    &kp R   &lt SYM S          SNPN       &kp E   &kp I
                 &lt FN C     LCTRD   LALTT              MSEH       &tdO    &tdY
                                      &mt LSHIFT SPC     &mt RSHIFT RET
