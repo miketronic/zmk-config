@@ -90,7 +90,7 @@
 
         symbol_layer {
             bindings = <
-                &grtl &kp STAR NNN        &par &bkt &thn
+                &grvtld &kp STAR NNN        &par &bkt &thn
                 NNN   &kp PLUS NNN        &cln &sls &pipe
                 &bootloader   NNN      NNN        &qot &at &perc 
                                NNN        NNN
