@@ -21,5 +21,8 @@ manifest:
       # main - v3
       # revision: main
       revision: v1_3col_wfg
+    - name: zmk-keyboards-capsule3
+      remote: miketronic
+      revision: main
   self:
     path: config
