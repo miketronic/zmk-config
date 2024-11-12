@@ -80,7 +80,7 @@
         default_layer {
             bindings = <
                 &tdW         &kp F   &lt NUM G          &kp M      &kp L   &kp U
-                &lt MAC A    &kp R   &lt SYM S          SNPN       &kp E   &kp I
+                &lt MAC A    &kp R   &lt SYM S          &kp N      &kp E   &kp I
                 &lt FN C     LCTRD   LALTT              MSEH       &tdO    &tdY
                                      &mt LSHIFT SPC     &mt RSHIFT RET
             >;
