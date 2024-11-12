@@ -35,9 +35,9 @@ COMBO(excl,   &kp EXCL,    RM1 RM2, 50)
 COMBO(z,      &kp Z,       LB2 LB3, 50)
 COMBO(x,      &kp X,       LB3 LB4, 50)
 COMBO(qmark,  &kp QMARK,   RB1 RB2, 50)
-COMBO(lctrl,  &mo LCTRL,   LT2 LT3 LT4, 50)
-COMBO(rctrl,  &mo RCTRL,   RT0 RT1 RT2, 50)
-COMBO(lalt,   &mo LALT,    LM2 LM3 LM4, 50)
-COMBO(ralt,   &mo RALT,    RM0 RM1 RM2, 50)
+COMBO(lctrl,  &kp LCTRL,   LT2 LT3 LT4, 70)
+COMBO(rctrl,  &kp RCTRL,   RT0 RT1 RT2, 70)
+COMBO(lalt,   &kp LALT,    LM2 LM3 LM4, 70)
+COMBO(ralt,   &kp RALT,    RM0 RM1 RM2, 70)
     };
 };
