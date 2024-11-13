@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/rgb.h>
 #include "includes/macros.dtsi"
 #include "includes/behaviors.dtsi"
 #include "includes/combos_10x2.dtsi"
@@ -21,14 +22,25 @@
 #define SNP         4
 #define MAC         5
 #define FN          6
+#define RGB         7
 
 #define SFTENT   &mt RSHIFT RET
 #define SFTSPC   &mt LSHIFT SPC
+#define RSFT     &kp RSHIFT
 #define CPST     &cccv LC(C) LC(V)
 #define CLIP     &kp LC(LA(Q))
 #define GSHT     &kp LC(LA(G))
 #define MSEH     &lt MSE H
 #define SNPL     &mo SNP
+#define LRGB     &mo RGB
+#define RTOG     &rgb_ug RGB_TOG
+#define RHI      &rgb_ug RGB_HUI
+#define RHD      &rgb_ug RGB_HUD
+#define RSI      &rgb_ug RGB_SAI
+#define RSD      &rgb_ug RGB_SAD
+#define RBI      &rgb_ug RGB_BRI
+#define RBD      &rgb_ug RGB_BRD
+#define REF      &rgb_ug RGB_EFF
 
 #define MIN   &kp MINUS
 #define BSP   &kp BSPC
@@ -132,9 +144,18 @@
         function_layer {  
             bindings = <
                 CPST       CLIP         GSHT     &kp F2       &kp UP      &kp DEL
-                &kp TAB    NNN          &pg      &kp LEFT     &kp DOWN    &kp RIGHT
+                &kp TAB    LRGB         &pg      &kp LEFT     &kp DOWN    &kp RIGHT
                 &trans     &kp LC(BSPC) &hmend   &kp LC(Z)    &kp DEL     &kp LC(Y)
                 NNN        NNN
+            >;
+        };
+
+        rgb_layer {  
+            bindings = <
+                RTOG   NNN   NNN     RHI  RHD   REF
+                NNN    NNN   NNN     RSI  RSD   NNN
+                NNN    NNN   NNN     RBI  RBD   RSFT
+                NNN    NNN
             >;
         };
     };
