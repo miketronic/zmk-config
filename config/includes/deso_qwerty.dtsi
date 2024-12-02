@@ -43,7 +43,7 @@
         qesc: tap_dance_qesc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <180>;
             bindings = <&kp Q>, <&kp ESC>;
         };
 
@@ -95,7 +95,7 @@
             display-name = "-DESO-";  
             bindings = <LAYER_FROM38( \
                 &qesc, &lt NUM W, &kp E, &kp R, &kp T, &kp Y, &kp U, &kp I, &kp O, &kp P, \
-                &kp A, &kp S, &kp D, &kp F, &kp G, &kp H, &kp J, &kp K, &kp L, &kp SQT,   \
+                &kp A, &kp S, &kp D, &kp F, &kp G, &kp H, &kp J, &kp K, &kp L, &kp RET,   \
                 &lt SYM Z, &hrm LGUI X, &hrm LALT C, &kp V, &kp B, &kp N, &kp M, &kp COMMA, &kp DOT, &kp SLASH, \
                 &kp TAB, &kp TAB, &kp SPACE, &kp SPACE, &kp RET, &kp RET, &kp DEL, &kp BSPC \
             )>;
