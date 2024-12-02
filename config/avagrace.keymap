@@ -116,9 +116,9 @@
         NUMBER_layer {
             display-name = "NUMBER";  
             bindings = <
-                &none  &none  &none  &none  &none  &none  &none  &none  &kp N7 &kp N8  &kp N9 &none &trans
+                &bt BT_CLR  &none  &none  &none  &none  &none  &none  &none  &kp N7 &kp N8  &kp N9 &none &trans
                 &none  &none  &none  &none  &none  &none  &none  &none  &kp N4 &kp N5  &kp N6 &none &trans
-                &none  &none  &none  &none  &none  &none  &none  &none  &kp N1 &kp N2  &kp N3 &none &trans
+                &bt BT_NXT  &bt BT_PRV  &none  &none  &none  &none  &none  &none  &kp N1 &kp N2  &kp N3 &none &trans
                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp N0  &trans &trans &trans
             >;
         };
