@@ -24,7 +24,8 @@ manifest:
     - name: zmk-keyboards-desolation
       remote: miketronic
       # main - v3
-      revision: main
+      # revision: main
+      revision: v4
       # revision: v1_3col_wfg
     - name: zmk-keyboards-capsule3
       remote: miketronic
