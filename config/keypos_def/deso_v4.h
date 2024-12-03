@@ -36,8 +36,8 @@
   │ LT0 LT1 LT2 LT3 LT4         │        RT0 RT1 RT2 RT3 RT4 RT5 RT6 │
   │ LM0 LM1 LM2 LM3 LM4         │        RM0 RM1 RM2 RM3 RM4 RM5 RM6 │
   │ LB0 LB1 LB2 LB3 LB4         │        RB0 RB1 RB2 RB3 RB4 RB5 RB6 │
-  ╰───────────────╮ LH0 LH1 LH2 │RH0 RH1 RH2  ╭───────────── RH3 RH4 ╯ 
-                  ╰─────────────┴─────────────╯              RH5 RH6
+  ╰───────────────╮ LH2 LH3 LH4 │RH0 RH1 RH2  ╭───────────── RX5 RX6 ╯ 
+                  ╰─────────────┴─────────────╯              RY5 RY6
 */
 
 #pragma once
@@ -84,21 +84,22 @@
 #define RB5 35
 #define RB6 36
 
-#define LH0 37  // left thumb key
-#define LH1 38 
-#define LH2 39 
+#define LH2 37  // left thumb key
+#define LH3 38 
+#define LH4 39 
 
 #define RH0 40  // right thumb key
 #define RH1 41
 #define RH2 42
-#define RH3 43
-#define RH4 44
-#define RH5 45
-#define RH6 46
+
+#define RX5 43
+#define RX6 44
+#define RY5 45
+#define RY6 46
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4     // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RT6 RM0 RM1 RM2 RM3 RM4 RM5 RM6 RB0 RB1 RB2 RB3 RB4 RB5 RB6     // right-hand keys
-#define THUMBS         LH0 LH1 LH2 RH0 RH1 RH2 RH3 RH4 RH5 RH6                 // thumb keys
+#define THUMBS         LH2 LH3 LH4 RH0 RH1 RH2 RX5 RX6 RY5 RY6                 // thumb keys
 
 #define LAYER_FROM48( \
     k00, k01, k02, k03, k04,                                    k05, k06, k07, k08, k09, k10, k11, \
