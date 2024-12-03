@@ -102,7 +102,7 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RT6 RM0 RM1 RM2 RM3 RM4 RM5 RM6 RB0 RB1 RB2 RB3 RB4 RB5 RB6     // right-hand keys
 #define THUMBS         LH0 LH1 LH2 LH3 RH0 RH1 RH2 RH3 RH4 RH5 RH6 RH7         // thumb keys
 
-#define LAYER_FROM38( \
+#define LAYER_FROM48( \
     k00, k01, k02, k03, k04,                                    k05, k06, k07, k08, k09, k10, k11, \
     k12, k13, k14, k15, k16,                                    k17, k18, k19, k20, k21, k22, k23, \
     k24, k25, k26, k27, k28,                                    k29, k30, k31, k32, k33, k34, k35, \
