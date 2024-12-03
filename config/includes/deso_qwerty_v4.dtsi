@@ -93,7 +93,7 @@
 
         default_layer {
             display-name = "-DESO-";  
-            bindings = <LAYER_FROM38( \
+            bindings = <LAYER_FROM48( \
                 &qesc, &lt NUM W, &kp E, &kp R, &kp T, &kp Y, &kp U, &kp I, &kp O, &kp P,     &kp A, &kp A, \
                 &kp A, &kp S,     &kp D, &kp F, &kp G, &kp H, &kp J, &kp K, &kp L, &kp RET,   &kp B, &kp B, \
                 &lt SYM Z, &hrm LGUI X, &hrm LALT C, &kp V, &kp B, &kp N, &kp M, &kp COMMA, &kp DOT, &kp SLASH, &kp C, &kp C, \
@@ -103,7 +103,7 @@
 
         sym_layer {
             display-name = "SYMBOL";  
-            bindings = <LAYER_FROM38( \
+            bindings = <LAYER_FROM48( \
                 &kp EXCL, &kp AT, &kp HASH, &kp DLLR, &kp PRCNT, &kp CARET, &kp AMPS, &kp STAR, &kp PIPE, &none, &kp A, &kp A, \
                 &kp GRAVE, &kp TILDE, &kp UNDER, &kp EQUAL, &none, &bkt, &brc, &par, &thn, &kp BSLH,   &kp B, &kp B,   \
                 &none, &none, &kp PLUS, &kp MINUS, &none, &none, &none, &kp COLON, &trans, &kp SEMI, &kp C, &kp C, \
@@ -113,7 +113,7 @@
 
         num_layer {
             display-name = "NUMBER";  
-            bindings = <LAYER_FROM38( \
+            bindings = <LAYER_FROM48( \
                 &none, &none, &none, &none, &none, &none, &none, &none, &none, &none, &kp A, &kp A, \
                 &kp N1, &kp N2, &kp N3, &kp N4, &kp N5, &kp N6, &kp N7, &kp N8, &kp N9, &kp N0, &kp B, &kp B, \
                 &none, &none, &none, &none, &none, &none, &none, &none, &trans, &none, &kp C, &kp C, \
@@ -124,7 +124,7 @@
 /*
         mse_layer {
             display-name = "MOUSE";  
-            bindings = <LAYER_FROM38( \
+            bindings = <LAYER_FROM48( \
                 &kp PG_UP, &msc SCRL_UP, &mmv MOVE_UP, &msc SCRL_DOWN, &none, &none, &kp MINUS, &none, &none, &kp BSPC, &kp A, &kp A, \
                 &kp END, &mmv MOVE_LEFT, &mmv MOVE_DOWN, &mmv MOVE_RIGHT, &none, &none, &kp UNDER, &none, &none, &none, &kp B, &kp B, \
                 &kp PG_DN, &mkp LCLK, &mkp MCLK, &mkp RCLK, &none, &none, &none, &none, &none, &none, &kp C, &kp C, \
