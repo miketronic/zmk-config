@@ -8,15 +8,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
-#include "includes/mouse.dtsi"
-#    define MS_ACT(key) &lt MSE key
 
 #define DEF      0
 #define SYM      1
 #define NUM      2
-/* #define MSE      3 
-*/
 
 &mt {
     flavor = "tap-preferred";
@@ -39,13 +34,6 @@
     };
 
     behaviors {
-
-        qesc: tap_dance_qesc {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            bindings = <&kp Q>, <&kp ESC>;
-        };
 
         bkt: tap_dance_bracket {
             compatible = "zmk,behavior-tap-dance";
@@ -94,10 +82,11 @@
         default_layer {
             display-name = "-DESO-";  
             bindings = <
-                &kp Q  &lt NUM W  &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P     &kp A &kp A
-                &kp A &kp S     &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp RET   &kp B &kp B
-                &lt SYM Z &hrm LGUI X &hrm LALT C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp C &kp C
-                &kp TAB &kp SPACE &kp SPACE &kp RET &kp RET &kp BSPC &kp D &kp D &kp E &kp E
+                &kp Q  &lt NUM W  &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P
+                &kp A &kp S     &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp RET
+                &lt SYM Z &hrm LGUI X &hrm LALT C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp SLASH
+                &kp TAB &kp SPACE &kp SPACE &kp RET &kp RET &kp BSPC
+                &kp A &kp B &kp C &kp D &kp E &kp A &kp B &kp C &kp D &kp E
             >;
         };
 
@@ -120,18 +109,5 @@
                 &trans &trans &trans &trans &trans &trans &kp D &kp D &kp E &kp E
             >;
         };
-
-/*
-        mse_layer {
-            display-name = "MOUSE";  
-            bindings = <
-                &kp PG_UP &msc SCRL_UP &mmv MOVE_UP &msc SCRL_DOWN &none &none &kp MINUS &none &none &kp BSPC &kp A &kp A
-                &kp END &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none &kp UNDER &none &none &none &kp B &kp B
-                &kp PG_DN &mkp LCLK &mkp MCLK &mkp RCLK &none &none &none &none &none &none &kp C &kp C
-                &mkp LCLK &mkp MCLK &mkp RCLK &none &none &trans &kp D &kp D  &kp E &kp E
-            >;
-        };
-*/
-
     };
 };
