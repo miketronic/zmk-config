@@ -26,18 +26,18 @@
 
 /*                             Deso V4 KEY MATRIX / LAYOUT MAPPING
 
-  ╭────────────────────────────────┬───────────────────────────────────────╮ 
-  │  1   2   3   4   5             │           6   7   8   9   10  11  12  │
-  │ 13  14  15  16  17             │          18  19  20  21   22  23  24  │
-  │ 25  26  27  28  29             │          30  31  32  33   34  35  36  │
-  ╰───────────────╮ 37  38  39  49 │ 41 42 43 44  ╭─────────────── 45  46 ─╯
-                  ╰────────────────┴──────────────╯                47  48
-  ╭────────────────────────────────┬────────────────────────────────────────╮
-  │ LT0 LT1 LT2 LT3 LT4            │            RT0 RT1 RT2 RT3 RT4 RT5 RT6 │
-  │ LM0 LM1 LM2 LM3 LM4            │            RM0 RM1 RM2 RM3 RM4 RM5 RM6 │
-  │ LB0 LB1 LB2 LB3 LB4            │            RB0 RB1 RB2 RB3 RB4 RB5 RB6 │
-  ╰───────────────╮ LH0 LH1 LH2 LH3│RH0 RH1 RH2 RH3 ╭────────────── RH4 RH5 ╯ 
-                  ╰────────────────┴────────────────╯               RH6 RH7
+  ╭─────────────────────────────┬─────────────────────────────────────╮ 
+  │  1   2   3   4   5          │         6   7   8   9   10  11  12  │
+  │ 13  14  15  16  17          │        18  19  20  21   22  23  24  │
+  │ 25  26  27  28  29          │        30  31  32  33   34  35  36  │
+  ╰───────────────╮ 37  38  39  │  40 41 42    ╭───────────── 43  44 ─╯
+                  ╰─────────────┴──────────────╯              45  46
+  ╭─────────────────────────────┬────────────────────────────────────╮
+  │ LT0 LT1 LT2 LT3 LT4         │        RT0 RT1 RT2 RT3 RT4 RT5 RT6 │
+  │ LM0 LM1 LM2 LM3 LM4         │        RM0 RM1 RM2 RM3 RM4 RM5 RM6 │
+  │ LB0 LB1 LB2 LB3 LB4         │        RB0 RB1 RB2 RB3 RB4 RB5 RB6 │
+  ╰───────────────╮ LH0 LH1 LH2 │RH0 RH1 RH2  ╭───────────── RH3 RH4 ╯ 
+                  ╰─────────────┴─────────────╯              RH5 RH6
 */
 
 #pragma once
@@ -87,28 +87,26 @@
 #define LH0 37  // left thumb key
 #define LH1 38 
 #define LH2 39 
-#define LH3 40 
 
-#define RH0 41  // right thumb key
-#define RH1 42
-#define RH2 43
-#define RH3 44
-#define RH4 45
-#define RH5 46
-#define RH6 47
-#define RH7 48
+#define RH0 40  // right thumb key
+#define RH1 41
+#define RH2 42
+#define RH3 43
+#define RH4 44
+#define RH5 45
+#define RH6 46
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4     // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RT6 RM0 RM1 RM2 RM3 RM4 RM5 RM6 RB0 RB1 RB2 RB3 RB4 RB5 RB6     // right-hand keys
-#define THUMBS         LH0 LH1 LH2 LH3 RH0 RH1 RH2 RH3 RH4 RH5 RH6 RH7         // thumb keys
+#define THUMBS         LH0 LH1 LH2 RH0 RH1 RH2 RH3 RH4 RH5 RH6                 // thumb keys
 
 #define LAYER_FROM48( \
     k00, k01, k02, k03, k04,                                    k05, k06, k07, k08, k09, k10, k11, \
     k12, k13, k14, k15, k16,                                    k17, k18, k19, k20, k21, k22, k23, \
     k24, k25, k26, k27, k28,                                    k29, k30, k31, k32, k33, k34, k35, \
-                        k36, k37, k38, k39,      k40, k41, k42, k43, k44, k45, k46, k47            \
+                        k36, k37, k38,           k40, k41, k42, k43, k44, k45, k46                 \
 ) \
     k00  k01  k02  k03  k04                                     k05  k06  k07  k08  k09  k10  k11  \
     k12  k13  k14  k15  k16                                     k17  k18  k19  k20  k21  k22  k23  \
     k24  k25  k26  k27  k28                                     k29  k30  k31  k32  k33  k34  k35  \
-                        k36  k37  k38  k39       k40  k41  k42  k43  k44  k45  k46  k47
+                        k36  k37  k38            k40  k41  k42  k43  k44  k45  k46
