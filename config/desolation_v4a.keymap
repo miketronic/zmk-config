@@ -96,7 +96,7 @@
                 &kp A  &kp S  &kp D &kp F   &kp G   &kp H  &kp J  &kp K &kp L &kp RET
                 SYMZ   GUIX   ALTC  &kp V   &kp B   &kp N  &kp M  COM   DT    SLS
                 TB     SPC    SPC   &kp RET &kp RET &kp BSPC
-                &kp A  &kp B  &kp C &kp D   &kp E   
+                &kp A  &kp X  &kp C &kp D   &kp E   
                 &kp F  &kp G  &kp H &kp I   &kp J
             >;
         };
