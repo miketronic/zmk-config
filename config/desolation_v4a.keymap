@@ -13,6 +13,16 @@
 #define SYM      1
 #define NUM      2
 
+#define NUMW     &lt NUM W
+#define SYMZ     &lt SYM Z
+#define GUIX     &hrm LGUI X
+#define ALTC     &hrm LALT C
+#define COM      &kp COMMA
+#define DT       &kp DOT 
+#define SLS      &kp SLASH
+#define TB       &kp TAB   
+#define SPC      &kp SPACE
+
 &mt {
     flavor = "tap-preferred";
     tapping_term_ms = <180>;
@@ -82,11 +92,12 @@
         default_layer {
             display-name = "-DESO-";  
             bindings = <
-                &kp Q &lt NUM W  &kp E &kp R &kp T &kp Y  &kp U &kp I &kp O &kp P
-                &kp A     &kp S  &kp D &kp F &kp G &kp H  &kp J &kp K &kp L &kp RET
-                &lt SYM Z &hrm LGUI X &hrm LALT C &kp V   &kp B &kp N &kp M &kp COMMA &kp DOT &kp SLASH
-                &kp TAB   &kp SPACE   &kp SPACE   &kp RET &kp RET &kp BSPC
-                &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J
+                &kp Q  NUMW   &kp E &kp R   &kp T   &kp Y  &kp U  &kp I &kp O &kp P
+                &kp A  &kp S  &kp D &kp F   &kp G   &kp H  &kp J  &kp K &kp L &kp RET
+                SYMZ   GUIX   ALTC  &kp V   &kp B   &kp N  &kp M  COM   DT    SLS
+                TB     SPC    SPC   &kp RET &kp RET &kp BSPC
+                &kp A  &kp B  &kp C &kp D   &kp E   
+                &kp F  &kp G  &kp H &kp I   &kp J
             >;
         };
 
