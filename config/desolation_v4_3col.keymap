@@ -19,8 +19,8 @@
 #define MAC         5
 #define FN          6
 
-#define SFTENT   &mt RSHIFT RET
-#define SFTSPC   &mt LSHIFT SPC
+#define SFTENT   &mt RSHIFT ENTER
+#define SFTSPC   &mt LSHIFT SPACE
 #define RSFT     &kp RSHIFT
 #define CPST     &cccv LC(C) LC(V)
 #define CLIP     &kp LC(LA(Q))
@@ -38,7 +38,7 @@
 #define BSP      &kp BSPC
 #define BOOT     &bootloader
 #define SNPL     &mo SNP
-#define ###      &none
+#define NNN      &none
 
 #define MIN   &kp MINUS
 #define BSP   &kp BSPC
@@ -376,9 +376,9 @@
         default_layer {
             display-name = "-DESO-";  
             bindings = <
-                ### ### &tdW &kp F NUMG      &kp M &kp L &kp U ### ###
-                ### ### MACA &kp R SYMS      &kp N &kp E &kp I ### ###
-                ### ### FNC  LCTD  LLTT      MSEH  &tdO  &tdY  ### ###
+                NNN NNN &tdW &kp F NUMG      &kp M &kp L &kp U NNN NNN
+                NNN NNN MACA &kp R SYMS      &kp N &kp E &kp I NNN NNN
+                NNN NNN FNC  LCTD  LLTT      MSEH  &tdO  &tdY  NNN NNN
                         TB    SPC   SPC      RTRN  RTRN  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
@@ -388,9 +388,9 @@
         sym_layer {
             display-name = "SYMBOL";  
             bindings = <
-                ### ### &grvtld &kp STAR ###    &par &bkt &thn  ### ###
-                ### ### ###     &kp PLUS ###    &cln &sls &pipe ### ###
-                ### ### ###     ###      ###    &qot &at  &perc ### ###
+                NNN NNN &grvtld &kp STAR NNN    &par &bkt &thn  NNN NNN
+                NNN NNN NNN     &kp PLUS NNN    &cln &sls &pipe NNN NNN
+                NNN NNN NNN     NNN      NNN    &qot &at  &perc NNN NNN
                         TB    SPC   SPC      RTRN  RTRN  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
@@ -400,9 +400,9 @@
         num_layer {
             display-name = "NUMBER";  
             bindings = <
-                ### ### &kp TAB &kp STAR ###        &kp N7 &kp N8 &kp N9 ### ###
-                ### ### ###     ###      ###        &kp N4 &kp N5 &kp N6 ### ###
-                ### ### BOOT    ###      ###        &kp N1 &td20  &kp N3 ### ###
+                NNN NNN &kp TAB &kp STAR NNN        &kp N7 &kp N8 &kp N9 NNN NNN
+                NNN NNN NNN     NNN      NNN        &kp N4 &kp N5 &kp N6 NNN NNN
+                NNN NNN BOOT    NNN      NNN        &kp N1 &td20  &kp N3 NNN NNN
                         TB    SPC   SPC      RTRN  RTRN  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
@@ -412,9 +412,9 @@
         mse_layer {
             display-name = "MOUSE";
             bindings = <
-                ### ### &msc SCRL_UP   &mmv MOVE_UP    &msc SCRL_DOWN   &kp MINUS &kp UNDER  &kp BSPC          ### ###
-                ### ### &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  ###       ###        ###               ### ### 
-                ### ### &mkp MCLK      &mkp RCLK       &mkp LCLK        ###       ###        &cccv LC(C) LC(V) ### ###
+                NNN NNN &msc SCRL_UP   &mmv MOVE_UP    &msc SCRL_DOWN   &kp MINUS &kp UNDER  &kp BSPC          NNN NNN
+                NNN NNN &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  NNN       NNN        NNN               NNN NNN 
+                NNN NNN &mkp MCLK      &mkp RCLK       &mkp LCLK        NNN       NNN        &cccv LC(C) LC(V) NNN NNN
                         TB    SPC   SPC      RTRN  RTRN  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
@@ -424,9 +424,9 @@
         mac_layer {
             display-name = "MACRO";
             bindings = <
-                ### ### &bt BT_CLR &bt BT_NXT &bt BT_PRV  ### ### ### ### ###
-                ### ### &trans &lines &square             ### ### ### ### ### 
-                ### ### ###    &date  &time               &th &re &yw ### ###
+                NNN NNN &bt BT_CLR &bt BT_NXT &bt BT_PRV  NNN NNN NNN NNN NNN
+                NNN NNN &trans &lines &square             NNN NNN NNN NNN NNN 
+                NNN NNN NNN    &date  &time               &th &re &yw NNN NNN
                         TB    SPC   SPC                   RTRN  RTRN  BSP
                 &kp END    &kp DOWN     TB                BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN              &kp HOME      &kp UP
@@ -436,9 +436,9 @@
         fn_layer {
             display-name = "FUNCTION";    
             bindings = <
-                ### ###   &cccv LC(C) LC(V)  &kp LC(LA(Q))   &kp LC(LA(G))    &kp F2       &kp UP      &kp DEL    ### ### 
-                ### ###   &kp TAB            ###             &pg              &kp LEFT     &kp DOWN    &kp RIGHT  ### ### 
-                ### ###   &trans             &kp LC(BSPC)    &hmend           &kp LC(Z)    &kp DEL     &kp LC(Y)  ### ### 
+                NNN NNN   &cccv LC(C) LC(V)  &kp LC(LA(Q))   &kp LC(LA(G))    &kp F2       &kp UP      &kp DEL    NNN NNN 
+                NNN NNN   &kp TAB            NNN             &pg              &kp LEFT     &kp DOWN    &kp RIGHT  NNN NNN 
+                NNN NNN   &trans             &kp LC(BSPC)    &hmend           &kp LC(Z)    &kp DEL     &kp LC(Y)  NNN NNN 
                            TB    SPC   SPC      RTRN  RTRN  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
