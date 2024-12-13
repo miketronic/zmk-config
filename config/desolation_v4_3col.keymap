@@ -410,9 +410,9 @@
         mse_layer {
             display-name = "MOUSE";
             bindings = <
-                NNN NNN &msc SCRL_UP   &mmv MOVE_UP    &msc SCRL_DOWN   &kp MINUS &kp UNDER  &kp BSPC          NNN NNN
-                NNN NNN &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  NNN       NNN        NNN               NNN NNN 
-                NNN NNN &mkp MCLK      &mkp RCLK       &mkp LCLK        NNN       NNN        &cccv LC(C) LC(V) NNN NNN
+                NNN NNN &msc SCRL_UP   &mmv MOVE_UP    &msc SCRL_DOWN   &kp MINUS &kp UNDER  BSP  NNN NNN
+                NNN NNN &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  NNN       NNN        NNN  NNN NNN 
+                NNN NNN &mkp MCLK      &mkp RCLK       &mkp LCLK        NNN       NNN        CPST NNN NNN
                         TB    SFTSPC   SFTSPC      SFTENT  SFTENT  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
@@ -434,7 +434,7 @@
         fn_layer {
             display-name = "FUNCTION";    
             bindings = <
-                NNN NNN   &cccv LC(C) LC(V)  &kp LC(LA(Q))   &kp LC(LA(G))    &kp F2       &kp UP      &kp DEL    NNN NNN 
+                NNN NNN   CPST               CLIP            GSHT    &kp F2       &kp UP      &kp DEL    NNN NNN 
                 NNN NNN   &kp TAB            NNN             &pg              &kp LEFT     &kp DOWN    &kp RIGHT  NNN NNN 
                 NNN NNN   &trans             &kp LC(BSPC)    &hmend           &kp LC(Z)    &kp DEL     &kp LC(Y)  NNN NNN 
                         TB    SFTSPC   SFTSPC      SFTENT  SFTENT  BSP
