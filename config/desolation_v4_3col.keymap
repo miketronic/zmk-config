@@ -26,7 +26,18 @@
 #define CLIP     &kp LC(LA(Q))
 #define GSHT     &kp LC(LA(G))
 #define MSEH     &lt MSE H
+#define MACA     &lt MAC A 
+#define NUMG     &lt NUM G
+#define SYMS     &lt SYM S 
+#define FNC      &lt FN C
+#define LCTD     &hrm LCTRL D
+#define LLTD     &hrm LALT T
+#define RTRN     &kp RET
+#define TB       &kp TAB
+#define SPC      &kp SPACE
+#define BSP      &kp BSPC
 #define SNPL     &mo SNP
+#define ###      &none
 
 #define MIN   &kp MINUS
 #define BSP   &kp BSPC
@@ -300,6 +311,14 @@
                 ;
         };
 
+        em: ahk_em {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp FSLH &kp FSLH &kp E &kp M>
+                ;
+        };
+
         re: ahk_re {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -356,32 +375,72 @@
         default_layer {
             display-name = "-DESO-";  
             bindings = <
-                &kp Q  NUMW   &kp E &kp R   &kp T   &kp Y  &kp U  &kp I &kp O &kp P
-                &kp A  &kp S  &kp D &kp F   &kp G   &kp H  &kp J  &kp K &kp L &kp RET
-                SYMZ   GUIX   ALTC  &kp V   &kp B   &kp N  &kp M  COM   DT    SLS
-                TB     SPC    SPC   &kp RET &kp RET &kp BSPC
-                &kp END    &kp DOWN  TB        &kp BSPC      &kp ESC
-                &kp RIGHT  &kp LEFT  &kp RET   &kp HOME      &kp UP
+                ### ### &tdW &kp F NUMG      &kp M &kp L &kp U ### ###
+                ### ### MACA &kp R SYMS      &kp N &kp E &kp I ### ###
+                ### ### FNC  LCTD  LLTT      MSEH  &tdO  &tdY  ### ###
+                        TB    SPC   SPC      RTRN  RTRN  BSP
+                &kp END    &kp DOWN     TB        BSP           &kp ESC
+                &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
         };
 
         sym_layer {
             display-name = "SYMBOL";  
             bindings = <
-                &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp PIPE &none &kp A &kp A
-                &kp GRAVE &kp TILDE &kp UNDER &kp EQUAL &none &bkt &brc &par &thn &kp BSLH   &kp B &kp B
-                &none &none &kp PLUS &kp MINUS &none &none &none &kp COLON &trans &kp SEMI &kp C &kp C
-                &trans &trans &trans &trans &trans &trans &kp D &kp D &kp E &kp E
+                ### ### &grvtld &kp STAR ###    &par &bkt &thn  ### ###
+                ### ### ###     &kp PLUS ###    &cln &sls &pipe ### ###
+                ### ### ###     ###      ###    &qot &at  &perc ### ###
+                        TB    SPC   SPC      RTRN  RTRN  BSP
+                &kp END    &kp DOWN     TB        BSP           &kp ESC
+                &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
         };
 
         num_layer {
             display-name = "NUMBER";  
             bindings = <
-                &none &none &none &none &none &none &none &none &none &none &kp A &kp A
-                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp B &kp B
-                &none &none &none &none &none &none &none &none &trans &none &kp C &kp C
-                &trans &trans &trans &trans &trans &trans &kp D &kp D &kp E &kp E
+                ### ### &kp TAB     &kp STAR  ###        &kp N7 &kp N8 &kp N9 ### ###
+                ### ### ###         ###       ###        &kp N4 &kp N5 &kp N6 ### ###
+                ### ### &bootloader ###       ###        &kp N1 &td20  &kp N3 ### ###
+                        TB    SPC   SPC      RTRN  RTRN  BSP
+                &kp END    &kp DOWN     TB        BSP           &kp ESC
+                &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
+            >;
+        };
+
+        mse_layer {
+            display-name = "MOUSE";
+            bindings = <
+                ### ### &msc SCRL_UP   &mmv MOVE_UP    &msc SCRL_DOWN   &kp MINUS &kp UNDER  &kp BSPC          ### ###
+                ### ### &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  ###       ###        ###               ### ### 
+                ### ### &mkp MCLK      &mkp RCLK       &mkp LCLK        ###       ###        &cccv LC(C) LC(V) ### ###
+                        TB    SPC   SPC      RTRN  RTRN  BSP
+                &kp END    &kp DOWN     TB        BSP           &kp ESC
+                &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
+            >;
+        };
+
+        mac_layer {
+            display-name = "MACRO";
+            bindings = <
+                ### ### ###    ###    ###         ### ### ### ### ###
+                ### ### &trans &lines &square     ### ### ### ### ### 
+                ### ### ###    &date  &time       &th &re &yw ### ###
+                        TB    SPC   SPC           RTRN  RTRN  BSP
+                &kp END    &kp DOWN     TB        BSP           &kp ESC
+                &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
+            >;
+        };
+
+        fn_layer {
+            display-name = "FUNCTION";    
+            bindings = <
+                ### ###   &cccv LC(C) LC(V)  &kp LC(LA(Q))   &kp LC(LA(G))    &kp F2       &kp UP      &kp DEL    ### ### 
+                ### ###   &kp TAB            ###             &pg              &kp LEFT     &kp DOWN    &kp RIGHT  ### ### 
+                ### ###   &trans             &kp LC(BSPC)    &hmend           &kp LC(Z)    &kp DEL     &kp LC(Y)  ### ### 
+                           TB    SPC   SPC      RTRN  RTRN  BSP
+                &kp END    &kp DOWN     TB        BSP           &kp ESC
+                &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
         };
     };
