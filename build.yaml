@@ -15,22 +15,7 @@
 include:
   - board: nice_nano_v2
     shield: desolation nice_view_adapter nice_view
-    artifact-name: desolation_qwerty
-  - board: nice_nano_v2
-    shield: desolation nice_view_adapter nice_view
     cmake-args: -DKEYMAP_FILE=../../config/desolation_v4_3col.keymap
     artifact-name: desolation_v4_3col
   - board: nice_nano_v2
-    shield: desolation nice_view_adapter nice_view
-    cmake-args: -DKEYMAP_FILE=../../config/desolation_v4.keymap
-    artifact-name: desolation_v4
-  - board: nice_nano_v2
-    shield: avagrace nice_view_adapter nice_view
-    artifact-name: avagrace_qwerty
-  - board: nice_nano_v2
     shield: settings_reset
-  - board: waveshare_rp2040_zero
-    shield: capsule3
-  - board: waveshare_rp2040_zero
-    shield: 10x2
-  
