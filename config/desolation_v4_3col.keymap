@@ -33,7 +33,6 @@
 #define LLTD     &hrm LALT T
 #define RTRN     &kp RET
 #define TB       &kp TAB
-#define SPC      &kp SPACE
 #define BSP      &kp BSPC
 #define BOOT     &bootloader
 #define SNPL     &mo SNP
