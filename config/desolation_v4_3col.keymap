@@ -165,7 +165,6 @@
 
         bkt: tap_dance_bracket {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_bracket";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&kp RBKT>;
@@ -173,7 +172,6 @@
 
         cln: tap_dance_colon {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_colon";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp COLON>, <&kp SEMI>;
@@ -181,7 +179,6 @@
 
         par: tap_dance_paren {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_paren";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LPAR>, <&kp RPAR>;
@@ -189,7 +186,6 @@
 
         thn: tap_dance_then {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_then";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LT>, <&kp GT>;
@@ -197,7 +193,6 @@
 
         qot: tap_dance_quote {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_quote";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp DQT>;
@@ -205,7 +200,6 @@
 
         sls: tap_dance_slash {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_slash";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp FSLH>, <&kp BSLH>;
@@ -213,7 +207,6 @@
 
         pipe: tap_dance_pipe {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_pipe";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp PIPE>, <&kp AMPS>;
@@ -221,7 +214,6 @@
 
         at: tap_dance_at {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_at";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp AT>, <&kp HASH>;
@@ -229,7 +221,6 @@
 
         grvtld: tap_dance_gravetilde {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_gravetilde";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp GRAVE>, <&kp TILDE>;
@@ -237,7 +228,6 @@
 
         perc: tap_dance_perc {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_perc";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp PRCNT>, <&kp DLLR>;
@@ -245,7 +235,6 @@
 
         pg: tap_dance_pg {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_pg";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp PG_DN>, <&kp PG_UP>;
@@ -253,7 +242,6 @@
 
         hmend: tap_dance_hmend {
             compatible = "zmk,behavior-tap-dance";
-            label = "tap_dance_hmend";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp END>, <&kp HOME>;
