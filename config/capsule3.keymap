@@ -24,7 +24,8 @@
 #define SNP         4
 #define MAC         5
 #define FN          6
-# #define RGB         7
+// #define RGB         7
+
 
 #define SFTENT   &mt RSHIFT RET
 #define SFTSPC   &mt LSHIFT SPC
