@@ -30,7 +30,7 @@
 #define SYMS     &lt SYM S 
 #define FNC      &lt FN C
 #define LCTD     &hrm LCTRL D
-#define LLTD     &hrm LALT T
+#define LLTT     &hrm LALT T
 #define RTRN     &kp RET
 #define TB       &kp TAB
 #define BSP      &kp BSPC
