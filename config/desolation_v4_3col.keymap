@@ -36,6 +36,7 @@
 #define TB       &kp TAB
 #define SPC      &kp SPACE
 #define BSP      &kp BSPC
+#define BOOT     &bootloader
 #define SNPL     &mo SNP
 #define ###      &none
 
@@ -399,9 +400,9 @@
         num_layer {
             display-name = "NUMBER";  
             bindings = <
-                ### ### &kp TAB     &kp STAR  ###        &kp N7 &kp N8 &kp N9 ### ###
-                ### ### ###         ###       ###        &kp N4 &kp N5 &kp N6 ### ###
-                ### ### &bootloader ###       ###        &kp N1 &td20  &kp N3 ### ###
+                ### ### &kp TAB &kp STAR ###        &kp N7 &kp N8 &kp N9 ### ###
+                ### ### ###     ###      ###        &kp N4 &kp N5 &kp N6 ### ###
+                ### ### BOOT    ###      ###        &kp N1 &td20  &kp N3 ### ###
                         TB    SPC   SPC      RTRN  RTRN  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
@@ -423,12 +424,12 @@
         mac_layer {
             display-name = "MACRO";
             bindings = <
-                ### ### ###    ###    ###         ### ### ### ### ###
-                ### ### &trans &lines &square     ### ### ### ### ### 
-                ### ### ###    &date  &time       &th &re &yw ### ###
-                        TB    SPC   SPC           RTRN  RTRN  BSP
-                &kp END    &kp DOWN     TB        BSP           &kp ESC
-                &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
+                ### ### &bt BT_CLR &bt BT_NXT &bt BT_PRV  ### ### ### ### ###
+                ### ### &trans &lines &square             ### ### ### ### ### 
+                ### ### ###    &date  &time               &th &re &yw ### ###
+                        TB    SPC   SPC                   RTRN  RTRN  BSP
+                &kp END    &kp DOWN     TB                BSP           &kp ESC
+                &kp RIGHT  &kp LEFT     RTRN              &kp HOME      &kp UP
             >;
         };
 
