@@ -18,11 +18,11 @@ include:
     artifact-name: desolation_qwerty
   - board: nice_nano_v2
     shield: desolation nice_view_adapter nice_view
-    cmake-args: -DKEYMAP_FILE=../../config/desolation_wfg_3col.keymap
-    artifact-name: desolation_wfg_3col
+    cmake-args: -DKEYMAP_FILE=../../config/desolation_v4_3col.keymap
+    artifact-name: desolation_v4_3col
   - board: nice_nano_v2
     shield: desolation nice_view_adapter nice_view
-    cmake-args: -DKEYMAP_FILE=../../config/desolation_v4a.keymap
+    cmake-args: -DKEYMAP_FILE=../../config/desolation_v4.keymap
     artifact-name: desolation_v4
   - board: nice_nano_v2
     shield: avagrace nice_view_adapter nice_view
