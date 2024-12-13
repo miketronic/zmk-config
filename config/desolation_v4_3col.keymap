@@ -410,9 +410,9 @@
         mse_layer {
             display-name = "MOUSE";
             bindings = <
-                NNN NNN &msc SCRL_UP   &mmv MOVE_UP    &msc SCRL_DOWN   &kp MINUS &kp UNDER  BSP  NNN NNN
-                NNN NNN &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT  NNN       NNN        NNN  NNN NNN 
-                NNN NNN &mkp MCLK      &mkp RCLK       &mkp LCLK        NNN       NNN        CPST NNN NNN
+                NNN NNN MS_U MM_U MS_D  &kp MINUS &kp UNDER  BSP  NNN NNN
+                NNN NNN MM_L MM_D MM_R  NNN       NNN        NNN  NNN NNN 
+                NNN NNN MCK  RCK  LCK   NNN       NNN        CPST NNN NNN
                         TB    SFTSPC   SFTSPC      SFTENT  SFTENT  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
