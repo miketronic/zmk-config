@@ -20,10 +20,6 @@
 
 #define NNN   &none
 
-&led_strip {
-    chain_length = <21>;
-};
-
 
 / {
 
