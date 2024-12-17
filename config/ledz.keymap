@@ -16,7 +16,6 @@
 #define RHI      &rgb_ug RGB_HUI
 #define RSI      &rgb_ug RGB_SAI
 #define RBI      &rgb_ug RGB_BRI
-# #define REF      &rgb_ug RGB_EFF
 
 #define NNN   &none
 
