@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2024 miketronic
  * SPDX-License-Identifier: MIT
- * LEDZ
+ * LEDZ 
  */
 
 #include <behaviors.dtsi>
