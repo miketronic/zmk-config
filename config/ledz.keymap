@@ -11,7 +11,6 @@
 
 #define LEDZ         0
 
-#define LRGB     &mo RGB
 #define RTOG     &rgb_ug RGB_TOG
 #define RHI      &rgb_ug RGB_HUI
 #define RSI      &rgb_ug RGB_SAI
