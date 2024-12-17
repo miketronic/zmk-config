@@ -1,0 +1,41 @@
+/*
+ * Copyright (c) 2024 miketronic
+ * SPDX-License-Identifier: MIT
+ * LEDZ
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
+
+#define LEDZ         0
+
+#define LRGB     &mo RGB
+#define RTOG     &rgb_ug RGB_TOG
+#define RHI      &rgb_ug RGB_HUI
+#define RSI      &rgb_ug RGB_SAI
+#define RBI      &rgb_ug RGB_BRI
+# #define REF      &rgb_ug RGB_EFF
+
+#define NNN   &none
+
+&led_strip {
+    chain_length= <21>;
+};
+
+
+/ {
+
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        rgb_layer {  
+            bindings = <
+                RTOG   NNN   NNN     RHI  RSI   RBI
+            >;
+        };
+
+    };
+};
