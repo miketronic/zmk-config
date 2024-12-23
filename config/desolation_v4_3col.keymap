@@ -41,9 +41,11 @@
 #define PLS      &kp PLUS
 #define BSP      &kp BSPC
 #define GRVT     &grvtld
+#define HMND     &hmend
 #define BOOT     &bootloader
 #define SNPL     &mo SNP
 #define NNN      &none
+#define DWRD     &kp LC(BSPC)
 
 #define MIN   &kp MINUS
 #define BSP   &kp BSPC
@@ -418,7 +420,7 @@
             display-name = "MACRO";
             bindings = <
                 NNN NNN &bt BT_CLR &bt BT_NXT &bt BT_PRV  NNN NNN NNN NNN NNN
-                NNN NNN &trans &lines &square             NNN NNN NNN NNN NNN 
+                NNN NNN NNN   &lines &square             NNN NNN NNN NNN NNN 
                 NNN NNN NNN    &date  &time               &th &re &yw NNN NNN
                          TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB                BSP           &kp ESC
@@ -429,9 +431,9 @@
         fn_layer {
             display-name = "FUNCTION";    
             bindings = <
-                NNN NNN   CPST    CLIP         GSHT       &kp F2    &kp UP   &kp DEL    NNN NNN 
-                NNN NNN   &kp TAB NNN          &pg        &kp LEFT  &kp DOWN &kp RIGHT  NNN NNN 
-                NNN NNN   &trans  &kp LC(BSPC) &hmend     &kp LC(Z) &kp DEL  &kp LC(Y)  NNN NNN 
+                NNN NNN   CPST CLIP GSHT     &kp F2    &kp UP   &kp DEL    NNN NNN 
+                NNN NNN   TB   NNN  &pg      &kp LEFT  &kp DOWN &kp RIGHT  NNN NNN 
+                NNN NNN   NNN  DWRD HMND     &kp LC(Z) &kp DEL  &kp LC(Y)  NNN NNN 
                          TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
