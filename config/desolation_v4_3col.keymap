@@ -48,7 +48,7 @@
 #define DWRD     &kp LC(BSPC)
 #define BTC      &bt BT_CLR
 #define BTN      &bt BT_NXT
-#defink BTP      &bt BT_PRV
+#define BTP      &bt BT_PRV
 
 #define MIN   &kp MINUS
 #define BSP   &kp BSPC
