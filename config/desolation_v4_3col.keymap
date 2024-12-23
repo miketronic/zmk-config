@@ -40,6 +40,7 @@
 #define STR      &kp STAR
 #define PLS      &kp PLUS
 #define BSP      &kp BSPC
+#define GRVT     &grvtld
 #define BOOT     &bootloader
 #define SNPL     &mo SNP
 #define NNN      &none
@@ -380,10 +381,10 @@
         sym_layer {
             display-name = "SYMBOL";  
             bindings = <
-                NNN NNN &grvtld STR NNN    &par &bkt &thn  NNN NNN
-                NNN NNN NNN     PLS NNN    &cln &sls &pipe NNN NNN
-                NNN NNN NNN     NNN      NNN    &qot &at  &perc NNN NNN
-                         TB  SFS   SFS       SFE   SFE  BSP
+                NNN NNN GRVT STR NNN    &par &bkt &thn  NNN NNN
+                NNN NNN NNN  PLS NNN    &cln &sls &pipe NNN NNN
+                NNN NNN NNN  NNN NNN    &qot &at  &perc NNN NNN
+                        TB   SFS SFS    SFE  SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
@@ -392,10 +393,10 @@
         num_layer {
             display-name = "NUMBER";  
             bindings = <
-                NNN NNN TB      STR      NNN        &kp N7 &kp N8 &kp N9 NNN NNN
-                NNN NNN NNN     NNN      NNN        &kp N4 &kp N5 &kp N6 NNN NNN
-                NNN NNN BOOT    NNN      NNN        &kp N1 &td20  &kp N3 NNN NNN
-                         TB  SFS   SFS       SFE   SFE  BSP
+                NNN NNN TB   STR NNN      &kp N7 &kp N8 &kp N9 NNN NNN
+                NNN NNN NNN  NNN NNN      &kp N4 &kp N5 &kp N6 NNN NNN
+                NNN NNN BOOT NNN NNN      &kp N1 &td20  &kp N3 NNN NNN
+                        TB   SFS SFS      SFE    SFE    BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
@@ -404,10 +405,10 @@
         mse_layer {
             display-name = "MOUSE";
             bindings = <
-                NNN NNN MS_U MM_U MS_D MIN UNDR BSP  NNN NNN
-                NNN NNN MM_L MM_D MM_R NNN NNN  NNN  NNN NNN 
-                NNN NNN MCK  RCK  LCK  NNN NNN  CPST NNN NNN
-                         TB  SFS   SFS       SFE   SFE  BSP
+                NNN NNN MS_U MM_U MS_D   MIN UNDR BSP  NNN NNN
+                NNN NNN MM_L MM_D MM_R   NNN NNN  NNN  NNN NNN 
+                NNN NNN MCK  RCK  LCK    NNN NNN  CPST NNN NNN
+                         TB  SFS  SFS    SFE SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
@@ -428,9 +429,9 @@
         fn_layer {
             display-name = "FUNCTION";    
             bindings = <
-                NNN NNN   CPST               CLIP            GSHT    &kp F2       &kp UP      &kp DEL    NNN NNN 
-                NNN NNN   &kp TAB            NNN             &pg              &kp LEFT     &kp DOWN    &kp RIGHT  NNN NNN 
-                NNN NNN   &trans             &kp LC(BSPC)    &hmend           &kp LC(Z)    &kp DEL     &kp LC(Y)  NNN NNN 
+                NNN NNN   CPST    CLIP         GSHT       &kp F2    &kp UP   &kp DEL    NNN NNN 
+                NNN NNN   &kp TAB NNN          &pg        &kp LEFT  &kp DOWN &kp RIGHT  NNN NNN 
+                NNN NNN   &trans  &kp LC(BSPC) &hmend     &kp LC(Z) &kp DEL  &kp LC(Y)  NNN NNN 
                          TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
