@@ -409,6 +409,18 @@
             bindings = <
                 NNN NNN MS_U MM_U MS_D   MIN UNDR BSP  NNN NNN
                 NNN NNN MM_L MM_D MM_R   NNN NNN  NNN  NNN NNN 
+                NNN NNN MCK  RCK  LCK    NNN SNP  CPST NNN NNN
+                         TB  SFS  SFS    SFE SFE  BSP
+                &kp END    &kp DOWN     TB        BSP           &kp ESC
+                &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
+            >;
+        };
+
+        snp_layer {
+            display-name = "SNIPE";
+            bindings = <
+                NNN NNN MS_U MM_U MS_D   MIN UNDR BSP  NNN NNN
+                NNN NNN MM_L MM_D MM_R   NNN NNN  NNN  NNN NNN 
                 NNN NNN MCK  RCK  LCK    NNN NNN  CPST NNN NNN
                          TB  SFS  SFS    SFE SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
