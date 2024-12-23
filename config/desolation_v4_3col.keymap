@@ -46,6 +46,9 @@
 #define SNPL     &mo SNP
 #define NNN      &none
 #define DWRD     &kp LC(BSPC)
+#define BTC      &bt BT_CLR
+#define BTN      &bt BT_NXT
+#defink BTP      &bt BT_PRV
 
 #define MIN   &kp MINUS
 #define BSP   &kp BSPC
@@ -347,7 +350,7 @@
                 ;
         };
 
-        lines: ahk_lines {
+        ln: ahk_lines {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -355,7 +358,7 @@
                 ;
         };
 
-        square: ahk_square {
+        sq: ahk_square {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -409,7 +412,7 @@
             bindings = <
                 NNN NNN MS_U MM_U MS_D   MIN UNDR BSP  NNN NNN
                 NNN NNN MM_L MM_D MM_R   NNN NNN  NNN  NNN NNN 
-                NNN NNN MCK  RCK  LCK    NNN SNP  CPST NNN NNN
+                NNN NNN MCK  RCK  LCK    NNN SNPL NNN  NNN NNN
                          TB  SFS  SFS    SFE SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
@@ -421,7 +424,7 @@
             bindings = <
                 NNN NNN MS_U MM_U MS_D   MIN UNDR BSP  NNN NNN
                 NNN NNN MM_L MM_D MM_R   NNN NNN  NNN  NNN NNN 
-                NNN NNN MCK  RCK  LCK    NNN NNN  CPST NNN NNN
+                NNN NNN MCK  RCK  LCK    NNN NNN  NNN NNN NNN
                          TB  SFS  SFS    SFE SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
@@ -431,9 +434,9 @@
         mac_layer {
             display-name = "MACRO";
             bindings = <
-                NNN NNN &bt BT_CLR &bt BT_NXT &bt BT_PRV  NNN NNN NNN NNN NNN
-                NNN NNN NNN   &lines &square             NNN NNN NNN NNN NNN 
-                NNN NNN NNN    &date  &time               &th &re &yw NNN NNN
+                NNN NNN BTC BTN   BTP        NNN NNN NNN NNN NNN
+                NNN NNN NNN &ln   &sq        NNN NNN NNN NNN NNN 
+                NNN NNN NNN &date &time      &th &re &yw NNN NNN
                          TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB                BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN              &kp HOME      &kp UP
@@ -443,10 +446,10 @@
         fn_layer {
             display-name = "FUNCTION";    
             bindings = <
-                NNN NNN   CPST CLIP GSHT     &kp F2    &kp UP   &kp DEL    NNN NNN 
-                NNN NNN   TB   NNN  &pg      &kp LEFT  &kp DOWN &kp RIGHT  NNN NNN 
-                NNN NNN   NNN  DWRD HMND     &kp LC(Z) &kp DEL  &kp LC(Y)  NNN NNN 
-                         TB  SFS   SFS       SFE   SFE  BSP
+                NNN NNN CPST CLIP GSHT     &kp F2    &kp UP   &kp DEL    NNN NNN 
+                NNN NNN TB   NNN  &pg      &kp LEFT  &kp DOWN &kp RIGHT  NNN NNN 
+                NNN NNN NNN  DWRD HMND     &kp LC(Z) &kp DEL  &kp LC(Y)  NNN NNN 
+                        TB   SFS  SFS      SFE   SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
