@@ -23,8 +23,8 @@
 #define MAC         5
 #define FN          6
 
-#define SFTENT   &mt RSHIFT ENTER
-#define SFTSPC   &mt LSHIFT SPACE
+#define SFE      &mt RSHIFT ENTER
+#define SFS      &mt LSHIFT SPACE
 #define CPST     &cccv LC(C) LC(V)
 #define CLIP     &kp LC(LA(Q))
 #define GSHT     &kp LC(LA(G))
@@ -37,6 +37,8 @@
 #define LLTT     &hrm LALT T
 #define RTRN     &kp RET
 #define TB       &kp TAB
+#define STR      &kp STAR
+#define PLS      &kp PLUS
 #define BSP      &kp BSPC
 #define BOOT     &bootloader
 #define SNPL     &mo SNP
@@ -369,7 +371,7 @@
                 NNN NNN &tdW &kp F NUMG      &kp M &kp L &kp U NNN NNN
                 NNN NNN MACA &kp R SYMS      &kp N &kp E &kp I NNN NNN
                 NNN NNN FNC  LCTD  LLTT      MSEH  &tdO  &tdY  NNN NNN
-                        TB    SFTSPC   SFTSPC      SFTENT  SFTENT  BSP
+                         TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
@@ -378,10 +380,10 @@
         sym_layer {
             display-name = "SYMBOL";  
             bindings = <
-                NNN NNN &grvtld &kp STAR NNN    &par &bkt &thn  NNN NNN
-                NNN NNN NNN     &kp PLUS NNN    &cln &sls &pipe NNN NNN
+                NNN NNN &grvtld STR NNN    &par &bkt &thn  NNN NNN
+                NNN NNN NNN     PLS NNN    &cln &sls &pipe NNN NNN
                 NNN NNN NNN     NNN      NNN    &qot &at  &perc NNN NNN
-                        TB    SFTSPC   SFTSPC      SFTENT  SFTENT  BSP
+                         TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
@@ -390,10 +392,10 @@
         num_layer {
             display-name = "NUMBER";  
             bindings = <
-                NNN NNN &kp TAB &kp STAR NNN        &kp N7 &kp N8 &kp N9 NNN NNN
+                NNN NNN TB      STR      NNN        &kp N7 &kp N8 &kp N9 NNN NNN
                 NNN NNN NNN     NNN      NNN        &kp N4 &kp N5 &kp N6 NNN NNN
                 NNN NNN BOOT    NNN      NNN        &kp N1 &td20  &kp N3 NNN NNN
-                        TB    SFTSPC   SFTSPC      SFTENT  SFTENT  BSP
+                         TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
@@ -405,7 +407,7 @@
                 NNN NNN MS_U MM_U MS_D MIN UNDR BSP  NNN NNN
                 NNN NNN MM_L MM_D MM_R NNN NNN  NNN  NNN NNN 
                 NNN NNN MCK  RCK  LCK  NNN NNN  CPST NNN NNN
-                        TB    SFTSPC   SFTSPC      SFTENT  SFTENT  BSP
+                         TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
@@ -417,7 +419,7 @@
                 NNN NNN &bt BT_CLR &bt BT_NXT &bt BT_PRV  NNN NNN NNN NNN NNN
                 NNN NNN &trans &lines &square             NNN NNN NNN NNN NNN 
                 NNN NNN NNN    &date  &time               &th &re &yw NNN NNN
-                        TB    SFTSPC   SFTSPC      SFTENT  SFTENT  BSP
+                         TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB                BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN              &kp HOME      &kp UP
             >;
@@ -429,7 +431,7 @@
                 NNN NNN   CPST               CLIP            GSHT    &kp F2       &kp UP      &kp DEL    NNN NNN 
                 NNN NNN   &kp TAB            NNN             &pg              &kp LEFT     &kp DOWN    &kp RIGHT  NNN NNN 
                 NNN NNN   &trans             &kp LC(BSPC)    &hmend           &kp LC(Z)    &kp DEL     &kp LC(Y)  NNN NNN 
-                        TB    SFTSPC   SFTSPC      SFTENT  SFTENT  BSP
+                         TB  SFS   SFS       SFE   SFE  BSP
                 &kp END    &kp DOWN     TB        BSP           &kp ESC
                 &kp RIGHT  &kp LEFT     RTRN      &kp HOME      &kp UP
             >;
