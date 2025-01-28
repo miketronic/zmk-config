@@ -28,15 +28,6 @@ manifest:
       # revision: main
       revision: v4
       # revision: v1_3col_wfg
-    - name: zmk-keyboards-capsule3
-      remote: miketronic
-      revision: main
-    - name: zmk-keyboards-10x2
-      remote: miketronic
-      revision: main
-    - name: zmk-keyboards-avagrace
-      remote: miketronic
-      revision: main
     - name: zmk-keyboards-aeliux
       remote: miketronic
       revision: main
