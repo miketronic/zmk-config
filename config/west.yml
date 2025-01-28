@@ -37,7 +37,7 @@ manifest:
     - name: zmk-keyboards-avagrace
       remote: miketronic
       revision: main
-    - name: zmk-keyboards-ledz
+    - name: zmk-keyboards-aeliux
       remote: miketronic
       revision: main
   self:
