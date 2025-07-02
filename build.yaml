@@ -22,7 +22,7 @@ include:
     cmake-args: -DKEYMAP_FILE=../../config/desolation_v4.keymap
     artifact-name: desolation_v4
   - board: nice_nano_v2
-    shield: aeliux
-    artifact-name: aeliux
+    shield: aeliux_4
+    artifact-name: aeliux_4
   - board: nice_nano_v2
     shield: settings_reset
