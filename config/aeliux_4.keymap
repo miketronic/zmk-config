@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2025 miketronic
  * SPDX-License-Identifier: MIT
- * AELIUX BLE
+ * AELIUX 4
  */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 500
