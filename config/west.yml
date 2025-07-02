@@ -22,13 +22,13 @@ manifest:
       # remote: zmkfirmware
       # revision: main
       import: app/west.yml
-    - name: zmk-keyboards-desolation
-      remote: miketronic
+    # - name: zmk-keyboards-desolation
+    #   remote: miketronic
       # main - v3
       # revision: main
-      revision: v4
+    #  revision: v4
       # revision: v1_3col_wfg
-    - name: zmk-keyboards-aeliux
+    - name: zmk-keyboards-aeliux_4
       remote: miketronic
       revision: main
   self:
