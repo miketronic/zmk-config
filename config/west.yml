@@ -1,0 +1,33 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+    - name: miketronic
+      url-base: https://github.com/miketronic
+  projects:
+   # - name: zmk
+   #   remote: caksoylar
+   #   revision: caksoylar/experimental
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+    #  revision: feat/pointers-with-input-processors
+    #- name: zmk
+    #  remote: miketronic
+    #  revision: rp2040zero
+      # remote: zmkfirmware
+      # revision: main
+      import: app/west.yml
+    # - name: zmk-keyboards-desolation
+    #   remote: miketronic
+      # main - v3
+      # revision: main
+    #  revision: v4
+      # revision: v1_3col_wfg
+    - name: zmk-keyboards-aeliux_4
+      remote: miketronic
+      revision: main
+  self:
+    path: config
