@@ -16,9 +16,5 @@ manifest:
     - name: zmk-keyboards-aeliux_4
       remote: miketronic
       revision: dev
-      # revision: main
-    - name: zmk-rgbled-widget
-      remote: caksoylar
-      revision: main
   self:
     path: config
