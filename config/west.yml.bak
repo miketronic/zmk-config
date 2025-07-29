@@ -30,6 +30,6 @@ manifest:
       # revision: v1_3col_wfg
     - name: zmk-keyboards-aeliux_4
       remote: miketronic
-      revision: main
+      revision: dev
   self:
     path: config
