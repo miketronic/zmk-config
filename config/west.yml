@@ -15,7 +15,8 @@ manifest:
       import: app/west.yml
     - name: zmk-keyboards-aeliux_4
       remote: miketronic
-      revision: main
+      revision: dev
+      # revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
