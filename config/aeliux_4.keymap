@@ -12,9 +12,6 @@
  */
 
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 500
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
-
 #include <behaviors.dtsi>
 #include <input/processors.dtsi>
 #include <behaviors/rgbled_widget.dtsi>
@@ -26,51 +23,6 @@
 #include <dt-bindings/zmk/backlight.h>
 
 #define ALPHA       0
-#define SYMBOL      1
-#define NUMBER      2
-#define FUNCTION    3
-#define MOUSE       4
-
-#define FUNQ   &lt FUNCTION Q
-#define NUMX   &lt NUMBER X
-#define SYMZ   &lt SYMBOL Z
-#define MSEA   &lt MOUSE A
-
-#define MM_U &mmv MOVE_UP
-#define MM_D &mmv MOVE_DOWN
-#define MM_R &mmv MOVE_RIGHT
-#define MM_L &mmv MOVE_LEFT
-
-#define MS_U &msc SCRL_UP
-#define MS_D &msc SCRL_DOWN
-#define MS_R &msc SCRL_RIGHT
-#define MS_L &msc SCRL_LEFT
-
-#define MCK  &mkp MCLK  
-#define RCK  &mkp RCLK  
-#define LCK  &mkp LCLK 
-
-&mmv_input_listener {
-        standard {
-            layers = <MOUSE>;
-            input-processors = <&zip_xy_scaler 3 1>;
-        };
-};
-
-&mmv {
-    x-input-code = <INPUT_REL_X>;
-    y-input-code = <INPUT_REL_Y>;
-    time-to-max-speed-ms = <200>;
-    acceleration-exponent = <1>;
-};
-
-&mt {
-    tapping-term-ms = <160>;
-};
-
-&lt {
-    tapping-term-ms = <150>;
-};
 
 
 / {
@@ -79,54 +31,16 @@
         compatible = "zmk,keymap";
 
        ALPHA_layer {
-            display-name = "AELIUX";  
+            display-name = "ALPHA";  
             bindings = <
-                &kp ESC   FUNQ    &kp A   &kp A   &kp A   &kp T   &kp Y   &kp U   &kp I     &kp O   &kp P    &kp BSPC
-                &kp TAB   MSEA    &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K     &kp L   &kp CAPS
-                &kp LSHFT SYMZ    NUMX    &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA   &kp DOT  &kp UP
+                &kp ESC   &kp A    &kp A   &kp A   &kp A   &kp T   &kp Y   &kp U   &kp I     &kp O   &kp P    &kp BSPC
+                &kp TAB   &kp A    &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K     &kp L   &kp CAPS
+                &kp A     &kp A    &kp A   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA   &kp DOT  &kp UP
                 &kp LCTRL &kp LGUI &kp LALT &kp SPACE  &kp RET &kp LEFT &kp RIGHT &kp DOWN
             >;
         };
 
-        SYMBOL_layer {
-            display-name = "SYMBOL";  
-            bindings = <
-                &kp GRAVE &kp EXCL  &kp AT    &kp HASH  &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp PIPE &none &none
-                &kp GRAVE &kp TILDE &kp UNDER &kp EQUAL &none    &none  &none  &none      &none   &kp BSLH &none
-                &kp LSHFT     &none &kp PLUS  &kp MINUS &none    &none &none &kp COLON &trans &kp SEMI &kp RSHFT
-                &kp LCTRL &kp LGUI &kp LALT &kp SPACE  &kp RET &kp LEFT &kp DOWN &kp RIGHT
-            >;
-        };
-
-        NUMBER_layer {
-            display-name = "NUMBER";  
-            bindings = <
-                &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
-                &none &none &none &none &none &none &none &kp N4 &kp N5 &kp N6 &none
-                &kp LSHFT &none &none &none &none &none &none &kp N1 &kp N2 &kp N3 &kp RSHFT 
-                &kp LCTRL &kp LGUI &kp LALT &kp SPACE  &kp RET &kp LEFT &kp DOWN &kp RIGHT
-            >;
-        };
-
-        FUNCTION_layer {
-            display-name = "FUNCTION";  
-            bindings = <
-                &bl BL_TOG   &none  &ind_bat &ind_con  &none  &none  &none  &none  &none &none &none &bt BT_CLR
-                &none  &none  &none  &none  &none  &none  &none  &none  &none &none &none
-                &bt BT_NXT  &bt BT_PRV  &none  &none  &none  &none  &none  &none  &none &kp UP &none 
-                &kp LCTRL &kp LGUI &kp LALT &kp SPACE  &kp RET &kp LEFT &kp DOWN &kp RIGHT
-            >;
-        };
-
-        MOUSE_layer {
-            display-name = "MOUSE";  
-            bindings = <
-                &none  &kp A  &none  &none  &none  &none  &none  &none  &none &none &studio_unlock &bootloader
-                &none  &none  &none  &none  &none  &none  &none  &none  &none &none &none 
-                &none  &none  &none  &none  &none  &none  &none  &none  MS_U MM_U MS_D 
-                MCK  RCK  LCK               &kp SPACE  &kp RET          MM_L MM_D MM_R
-            >;
-        };
+        
 
     };
 };
