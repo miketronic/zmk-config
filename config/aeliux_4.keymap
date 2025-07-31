@@ -11,19 +11,22 @@
  *
  * List of behvaiors here > https://github.com/zmkfirmware/zmk/tree/main/app/dts/behaviors
  *
+ *
+ * #undef ZMK_BEHAVIORS_KEEP_ALL
+ * #define ZMK_BEHAVIORS_KEEP_BT
+ * #define ZMK_BEHAVIORS_KEEP_KP
+ * #define ZMK_BEHAVIORS_KEEP_LT
+ * #define ZMK_BEHAVIORS_KEEP_MKP
+ * #define ZMK_BEHAVIORS_KEEP_MMV
+ * #define ZMK_BEHAVIORS_KEEP_MSC
+ * #define ZMK_BEHAVIORS_KEEP_MT
+ * #define ZMK_BEHAVIORS_KEEP_NONE
+ * #define ZMK_BEHAVIORS_KEEP_SK
+ *
+ *
  */
 
-#undef ZMK_BEHAVIORS_KEEP_ALL
 
-#define ZMK_BEHAVIORS_KEEP_BT
-#define ZMK_BEHAVIORS_KEEP_KP
-#define ZMK_BEHAVIORS_KEEP_LT
-#define ZMK_BEHAVIORS_KEEP_MKP
-#define ZMK_BEHAVIORS_KEEP_MMV
-#define ZMK_BEHAVIORS_KEEP_MSC
-#define ZMK_BEHAVIORS_KEEP_MT
-#define ZMK_BEHAVIORS_KEEP_NONE
-#define ZMK_BEHAVIORS_KEEP_SK
 
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 500
@@ -148,7 +151,7 @@
        ALPHA_layer {
             display-name = "AELIUX";  
             bindings = <
-                &kp ESC   FUNQ    &kp A   &kp A   &kp A   &kp T   &kp Y   &kp U   &kp I     &kp O   &kp P    &kp BSPC
+                &kp ESC   FUNQ    &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I     &kp O   &kp P    &kp BSPC
                 &kp TAB   MSEA    &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K     &kp L   &kp CAPS
                 &kp LSHFT SYMZ    NUMX    &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA   &kp DOT  &kp UP
                 &kp LCTRL &kp LGUI &kp LALT &kp SPACE  &kp RET &kp LEFT &kp RIGHT &kp DOWN
