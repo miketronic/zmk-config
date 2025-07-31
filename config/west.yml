@@ -18,6 +18,6 @@ manifest:
       revision: main
     - name: zmk-keyboards-aeliux_4
       remote: miketronic
-      revision: rgbled
+      revision: main
   self:
     path: config
