@@ -1,0 +1,30 @@
+#
+# For Ataraxia
+#
+
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: bluedrink9
+      url-base: https://github.com/bluedrink9
+    - name: miketronic
+      url-base: https://github.com/miketronic
+    - name: m165437
+      url-base: https://github.com/M165437
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: zmk-poor-mans-led-indicator
+      remote: bluedrink9
+      revision: main
+    - name: zmk-keyboards-ataraxia
+      remote: miketronic
+      revision: main
+    - name: nice-view-gem
+      remote: m165437
+      revision: main
+  self:
+    path: config
