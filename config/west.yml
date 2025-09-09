@@ -1,13 +1,11 @@
 #
-# For Aeliux_v4
+# ataraxia
 #
 
 manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: bluedrink9
-      url-base: https://github.com/bluedrink9
     - name: miketronic
       url-base: https://github.com/miketronic
     - name: m165437
@@ -17,12 +15,6 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-poor-mans-led-indicator
-      remote: bluedrink9
-      revision: main
-  #  - name: zmk-keyboards-aeliux_4
-  #    remote: miketronic
-  #    revision: main
     - name: zmk-keyboards-ataraxia
       remote: miketronic
       revision: main
