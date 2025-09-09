@@ -20,9 +20,9 @@ manifest:
     - name: zmk-poor-mans-led-indicator
       remote: bluedrink9
       revision: main
-    - name: zmk-keyboards-aeliux_4
-      remote: miketronic
-      revision: main
+    # - name: zmk-keyboards-aeliux_4
+    #  remote: miketronic
+    #  revision: main
     - name: zmk-keyboards-ataraxia
       remote: miketronic
       revision: main
