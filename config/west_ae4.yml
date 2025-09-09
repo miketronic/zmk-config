@@ -1,0 +1,25 @@
+#
+# For Aeliux_v4
+#
+
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: bluedrink9
+      url-base: https://github.com/bluedrink9
+    - name: miketronic
+      url-base: https://github.com/miketronic
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: zmk-poor-mans-led-indicator
+      remote: bluedrink9
+      revision: main
+    - name: zmk-keyboards-aeliux_4
+      remote: miketronic
+      revision: main
+  self:
+    path: config
