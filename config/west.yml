@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/bluedrink9
     - name: miketronic
       url-base: https://github.com/miketronic
+    - name: m165437
+      url-base: https://github.com/M165437
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -20,6 +22,12 @@ manifest:
       revision: main
     - name: zmk-keyboards-aeliux_4
       remote: miketronic
+      revision: main
+    - name: zmk-keyboards-ataraxia
+      remote: miketronic
+      revision: main
+    - name: nice-view-gem
+      remote: m165437
       revision: main
   self:
     path: config
