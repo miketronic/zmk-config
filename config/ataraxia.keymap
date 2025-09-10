@@ -99,18 +99,6 @@
 
 / {
 
-    leds {
-        compatible = "gpio-leds";
-        user_led: led_0 {
-            gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
-            label = "User LED";
-        };
-    };
-
-    aliases {
-        indicator-led = &user_led;
-    };
-
     combos {
 
         compatible = "zmk,combos";
@@ -158,7 +146,6 @@
            quick-tap-ms = <0>;
            flavor = "tap-preferred";
            bindings = <&kp>, <&kp>;
-
         };
 
     };
