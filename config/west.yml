@@ -39,9 +39,9 @@ manifest:
    # - name: zmk-pmw3610-driver
    #   remote: n0rthPole
    #   revision: main
-    - name: zmk-input-processor-report-rate-limit
-      remote: badjeff
-      revision: main
+   # - name: zmk-input-processor-report-rate-limit
+   #   remote: badjeff
+   #   revision: main
       
   self:
     path: config
