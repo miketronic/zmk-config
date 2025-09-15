@@ -21,7 +21,7 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: ataraxia nice_view_adapter nice_view_gem
+    shield: ataraxia #nice_view_adapter #nice_view_gem
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: ataraxia
