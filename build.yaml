@@ -16,7 +16,7 @@
 #  cmake-args: -DCONFIG_ZMK_STUDIO=y
 #  **Tester config below**
 #  - board: nice_nano_v2 # Replace with the Pro Micro-compatible board you're using
-#    shield: tester_pro_micro
+#    shield: tester_pro_micro 
 
 ---
 include:
