@@ -23,9 +23,9 @@
  *
  */
 
-nice_view_spi: &spi2 {
-  cs-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
-};
+// nice_view_spi: &spi2 {
+//   cs-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
+// };
 
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 500
