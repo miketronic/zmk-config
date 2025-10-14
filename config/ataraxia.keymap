@@ -194,9 +194,6 @@
         };
     };
 
-      
-    };
-
     behaviors {
 
         bkt: tap_dance_bracket {
