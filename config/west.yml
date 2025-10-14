@@ -36,12 +36,9 @@ manifest:
    # - name: zmk-poor-mans-led-indicator
    #   remote: bluedrink9
    #   revision: main
-   # - name: zmk-pointing-acceleration-alpha
-   #   remote: nuovotaka
-   #   revision: main
-   # - name: zmk-input-processor-report-rate-limit
-   #   remote: badjeff
-   #   revision: main
+     - name: zmk-pointing-acceleration-alpha
+       remote: nuovotaka
+       revision: main
       
   self:
     path: config
