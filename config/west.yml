@@ -33,12 +33,12 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: main
+    - name: zmk-pointing-acceleration-alpha
+      remote: nuovotaka
+      revision: main
    # - name: zmk-poor-mans-led-indicator
    #   remote: bluedrink9
    #   revision: main
-     - name: zmk-pointing-acceleration-alpha
-       remote: nuovotaka
-       revision: main
       
   self:
     path: config
