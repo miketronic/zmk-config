@@ -1,34 +1,3 @@
-Skip to content
-Navigation Menu
-miketronic
-zmk-keyboards-ataraxia
-
-Type / to search
-Code
-Pull requests
-Discussions
-Actions
-Projects
-Security
-Insights
-Settings
-zmk-keyboards-ataraxia/boards/shields/ataraxia
-/ataraxia.keymap
-Go to file
-t
-miketronic
-miketronic
-Rename ataraxia.wfgkeymap to ataraxia.keymap
-8a72124
- · 
-now
-zmk-keyboards-ataraxia/boards/shields/ataraxia
-/ataraxia.keymap
-
-Code
-
-Blame
-485 lines (407 loc) · 13.1 KB
 /*
  * Copyright (c) 2025 miketronic
  * SPDX-License-Identifier: MIT
@@ -514,4 +483,3 @@ Blame
 
     };
 };
-zmk-keyboards-ataraxia/boards/shields/ataraxia/ataraxia.keymap at trackball · miketronic/zmk-keyboards-ataraxia 
