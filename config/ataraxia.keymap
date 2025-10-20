@@ -65,6 +65,7 @@
 
 #define LSHF    &kp LSHFT
 #define RSHF    &kp RSHFT
+#define RCTL    &kp RCTRL
 #define COMM    &kp COMMA
 #define GRV     &kp GRAVE
 #define UND     &kp UNDER
