@@ -6,7 +6,7 @@
 
 /*
  *
- * List of behvaiors here > https://github.com/zmkfirmware/zmk/tree/main/app/dts/behaviors
+ * List of behaviors here > https://github.com/zmkfirmware/zmk/tree/main/app/dts/behaviors
  *
  *
  * #undef ZMK_BEHAVIORS_KEEP_ALL
@@ -23,9 +23,7 @@
  *
  */
 
-// nice_view_spi: &spi2 {
-//   cs-gpios = <&pro_micro 7 GPIO_ACTIVE_HIGH>;
-// };
+
 
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 500
@@ -47,17 +45,23 @@
 #define NUMBER      2
 #define FUNCTION    3
 #define MOUSE       4
+#define TBALL       5
 
+#define CPST   &cccv LC(C) LC(V)
 #define ESCFN  &lt FUNCTION ESC
 #define NTAB   &lt NUMBER TAB
 #define SYMZ   &lt SYMBOL Z
 #define MSEA   &lt MOUSE A
+#define VBL    &lt TBALL V
 
 #define LSHF    &kp LSHFT
 #define RSHF    &kp RSHFT
+#define RTCL    &kp RCTRL
 #define COMM    &kp COMMA
 #define GRV     &kp GRAVE
 #define UND     &kp UNDER
+#define MINS    &kp MINUS
+#define UNDS    &kp UNDER
 
 #define MM_U &mmv MOVE_UP
 #define MM_D &mmv MOVE_DOWN
@@ -138,6 +142,14 @@
             bindings = <&kp LT>, <&kp GT>;
         };
 
+        cccv: copy_paste {
+           compatible = "zmk,behavior-hold-tap";
+           #binding-cells = <2>;
+           flavor = "hold-preferred";
+           tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
         hrm: homerow_mods {
            compatible = "zmk,behavior-hold-tap";
            #binding-cells = <2>;
@@ -155,18 +167,18 @@
     keymap {
         compatible = "zmk,keymap";
 
-/*
+
         ALPHA_layer {
             display-name = "ATARAXIA";  
             bindings = <
                 ESCFN   &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P    &kp BSPC
                 NTAB    MSEA    &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L   &kp SEMI &kp QUOT
-                LSHF    SYMZ    &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   COMM    &kp DOT &kp FSLH &kp CAPS
+                LSHF    SYMZ    &kp X   &kp C   VBL     &kp B   &kp N   &kp M   COMM    &kp DOT &kp FSLH &kp CAPS
                                 &kp LCTRL &kp LALT &kp SPACE  &kp RET   &kp RGUI &kp DEL
             >;
         };
 
-*/
+/*
         ALPHA_layer {
             display-name = "ATARAXIA";  
             bindings = <
@@ -176,7 +188,7 @@
                                 &kp A &kp B &kp C  &kp D   &kp E &kp F
             >;
         };
-
+*/
         SYMBOL_layer {
             display-name = "SYMBOL";  
             bindings = <
@@ -213,7 +225,17 @@
                 &none  &none  &none  &none  &none  &none  &none  MS_U   MM_U   MS_D  &none &none
                 &none  &none  &none  &none  &none  &none  &none  MM_L   MM_D   MM_R  &none &none
                 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none &none &none  
-                                    MCK  RCK  LCK                        MCK  RCK  LCK
+                                           RCK  MCK  LCK  LCK  MCK  RCK
+            >;
+        };
+
+        TBALL_layer {
+            display-name = "TBALL";  
+            bindings = <
+                &none  &none  RCK    MCK    LCK   &none  &none  RSHF   RTCL   &none &none &none
+                &none  &none  LSHF   MS_U   MS_D  &none  &none  CPST   &none  &none &none &none
+                &none  &none  &none  &none  &none &none  &none  &none  &none  &none &none &none  
+                              RCK    MCK    LCK                 LCK  MCK  RCK
             >;
         };
 
