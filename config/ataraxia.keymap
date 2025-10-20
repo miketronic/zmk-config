@@ -213,7 +213,7 @@
             display-name = "FUNCTION";  
             bindings = <
                 &none  &none  &none  &none  &none  &none  &none  &none  &none &none &none &bt BT_CLR
-                &none  &none  &none  &none  &none  &none  &none  &none  &none &none &none &none
+                &none  &none  &none  &none  &none  &none  &none  &none  &none &none &none &sys_reset
                 &bt BT_NXT  &bt BT_PRV  &none  &none  &none  &none  &none  &none  &none &none &studio_unlock &bootloader
                                  &kp LCTRL &kp LALT &kp SPACE  &kp RET   &kp RGUI &kp DEL
             >;
