@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  * ataraxia
  */
- 
+
 /*
  *
  * List of behaviors here > https://github.com/zmkfirmware/zmk/tree/main/app/dts/behaviors
@@ -63,7 +63,6 @@
 #define LSPC   &mt LSHIFT SPC
 #define RENT   &mt RSHIFT RET
 #define bl     &bootloader
-#define T7     &tog 7
 
 #define LSHF    &kp LSHFT
 #define RSHF    &kp RSHFT
@@ -73,7 +72,6 @@
 #define UND     &kp UNDER
 #define MINS    &kp MINUS
 #define UNDS    &kp UNDER
-#define KF2     &kp F2
 
 #define MM_U &mmv MOVE_UP
 #define MM_D &mmv MOVE_DOWN
@@ -346,6 +344,15 @@
             bindings = <&kp X>, <&tog 7>;
         };
 
+        hrm: homerow_mods {
+           compatible = "zmk,behavior-hold-tap";
+           #binding-cells = <2>;
+           tapping-term-ms = <250>;
+           quick-tap-ms = <0>;
+           flavor = "tap-preferred";
+           bindings = <&kp>, <&kp>;
+        };
+
     };
 
     macros {
@@ -422,7 +429,7 @@
         ALPHA_layer {
             display-name = "-ATAR-";  
             bindings = <
-                &none &none  &tdW &kp F NUMG &code T7     &kp M &kp L &kp U  &none &none
+                &none &none  &tdW &kp F NUMG &code &tog7  &kp M &kp L &kp U  &none &none
                 &none &none  MACA &kp R SYMS &none &none  &kp N &kp E &kp I  &none &none
                 &none &none  FUNC &kp D TTB  &none &none  MSEH  &tdO  &tdY   &none &none
                                 &kp TAB LSPC LSPC  RENT   RENT  &kp BSPC
