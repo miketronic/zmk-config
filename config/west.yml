@@ -16,6 +16,8 @@ manifest:
       url-base: https://github.com/nuovotaka
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: kumamuk-git
+      url-base: https://github.com/kumamuk-git
    # - name: bluedrink9
    #   url-base: https://github.com/bluedrink9
       
@@ -35,6 +37,9 @@ manifest:
       revision: main
     - name: zmk-pointing-acceleration-alpha
       remote: nuovotaka
+      revision: main
+    - name: zmk-pmw3610-driver
+      remote: kumamuk-git
       revision: main
    # - name: zmk-poor-mans-led-indicator
    #   remote: bluedrink9
