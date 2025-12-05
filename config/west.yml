@@ -6,22 +6,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: pete
-      url-base: https://github.com/petejohanson
     - name: miketronic
       url-base: https://github.com/miketronic
-    - name: m165437
-      url-base: https://github.com/M165437
-    - name: efogdev #Other zmk-pmw3610-driver config option
-      url-base: https://github.com/efogdev
     - name: nuovotaka
       url-base: https://github.com/nuovotaka
-    - name: badjeff
-      url-base: https://github.com/badjeff
-    - name: kumamuk-git
-      url-base: https://github.com/kumamuk-git
-   # - name: bluedrink9
-   #   url-base: https://github.com/bluedrink9
+
       
   projects:
     - name: zmk
@@ -43,9 +32,6 @@ manifest:
     - name: zmk-pointing-acceleration-alpha
       remote: nuovotaka
       revision: main
-   # - name: zmk-poor-mans-led-indicator
-   #   remote: bluedrink9
-   #   revision: main
       
   self:
     path: config
