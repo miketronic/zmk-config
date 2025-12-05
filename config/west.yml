@@ -27,7 +27,7 @@ manifest:
    #   remote: miketronic
    #   revision: ataraxia_v1_dragscroll
     - name: zmk-pointing-acceleration-alpha
-      remote: nuovotaka
+      remote: miketronic
       revision: main
       
   self:
