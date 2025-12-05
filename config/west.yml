@@ -23,9 +23,9 @@ manifest:
    # - name: zmk-pmw3610-driver-01
    #   remote: miketronic
    #   revision: main
-    - name: zmk-pmw3610-driver-02
-      remote: miketronic
-      revision: ataraxia_v1_dragscroll
+   # - name: zmk-pmw3610-driver-02
+   #   remote: miketronic
+   #   revision: ataraxia_v1_dragscroll
     - name: zmk-pointing-acceleration-alpha
       remote: nuovotaka
       revision: main
