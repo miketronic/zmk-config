@@ -115,7 +115,7 @@
 &lt {
     tapping-term-ms = <150>;
 };
-
+ 
 
 / {
 
