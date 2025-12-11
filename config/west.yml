@@ -19,7 +19,7 @@ manifest:
       import: app/west.yml
     - name: zmk-keyboards-ataraxia
       remote: miketronic
-      revision: ataraxia_v1_5col_scroll_ben
+      revision: ataraxia_v1
    # - name: zmk-pmw3610-driver-01
    #   remote: miketronic
    #   revision: main
