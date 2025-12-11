@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2025 miketronic
  * SPDX-License-Identifier: MIT
- * ataraxia v1 qwerty 5-column
+ * ataraxia v1
  */
 
 /*
@@ -23,6 +23,9 @@
  *
  */
 
+
+
+
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 500
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 
@@ -33,149 +36,156 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+
 #define ALPHA       0
-#define SYMBOL      1
-#define FN          2
+#define NUMBER      1
+#define SYMBOL      2
+#define MOUSE       3
+#define FUNCTION    4
+
+#define LSHF    &kp LSHFT
+#define RSHF    &kp RSHFT
+#define RTCL    &kp RCTRL
+#define COMM    &kp COMMA
+#define GRV     &kp GRAVE
+#define UND     &kp UNDER
+#define MINS    &kp MINUS
+#define UNDS    &kp UNDER
+#define PGUP    &kp PG_UP
+#define PGDN    &kp PG_DN
+
+#define MM_U &mmv MOVE_UP
+#define MM_D &mmv MOVE_DOWN
+#define MM_R &mmv MOVE_RIGHT
+#define MM_L &mmv MOVE_LEFT
 
 #define MS_U &msc SCRL_UP
 #define MS_D &msc SCRL_DOWN
 #define MS_R &msc SCRL_RIGHT
 #define MS_L &msc SCRL_LEFT
 
+#define MCK  &mkp MCLK  
+#define RCK  &mkp RCLK  
+#define LCK  &mkp LCLK 
+
+&mmv_input_listener {
+        standard {
+            layers = <MOUSE>;
+            input-processors = <&zip_xy_scaler 3 1>;
+        };
+};
+
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <1>;
+};
+
+&mt {
+    tapping-term-ms = <160>;
+};
+
+&lt {
+    tapping-term-ms = <150>;
+};
+
 
 / {
-    combos {
-        compatible = "zmk,combos";
 
+    combos {
+
+        compatible = "zmk,combos";
         combo_bootloader {
-            timeout-ms = <40>;
-            key-positions = < 29 30 >;
+            timeout-ms = <100>;
+            key-positions = <0 11>;
             bindings = <&bootloader>;
-            layers = < FN >;
-        };
-        combo_right_meh {
-            timeout-ms = <40>;
-            key-positions = < 19 20 21 >;
-            bindings = < &sk RC(RG(RS(0))) >;
-        };
-        combo_left_meh {
-            timeout-ms = <40>;
-            key-positions = < 14 15 16 >;
-            bindings = < &sk LC(LG(LS(0))) >;
-        };
-        combo_right_hyper {
-            timeout-ms = <40>;
-            key-positions = < 19 20 21 22 >;
-            bindings = < &sk RC(RG(RA(RS(0)))) >;
-        };
-        combo_left_hyper {
-            timeout-ms = <40>;
-            key-positions = < 14 15 16 17 >;
-            bindings = < &sk LC(LG(LA(LS(0)))) >;
-        };
-        combo_left_mouse_click {
-            timeout-ms = <40>;
-            key-positions = < 15 16 >;
-            bindings = <&mkp LCLK>;
-        };
-        combo_right_mouse_click {
-            timeout-ms = <40>;
-            key-positions = < 14 15 >;
-            bindings = <&mkp RCLK>;
-        };
-        combo_middle_mouse_click {
-            timeout-ms = <40>;
-            key-positions = < 13 14 >;
-            bindings = <&mkp MCLK>;
-        };
-        combo_esc {
-            timeout-ms = <40>;
-            key-positions = < 1 16 >;
-            bindings = <&kp ESC>;
-        };
-        combo_tab {
-            timeout-ms = <40>;
-            key-positions = < 13 16 >;
-            bindings = <&kp TAB>;
-        };
-        combo_backspace {
-            timeout-ms = <40>;
-            key-positions = < 19 10 >;
-            bindings = <&kp BACKSPACE>;
-        };
-        combo_del {
-            timeout-ms = <40>;
-            key-positions = < 19 9 >;
-            bindings = <&kp DELETE>;
-        };
-        combo_enter {
-            timeout-ms = <40>;
-            key-positions = < 19 22 >;
-            bindings = <&kp ENTER>;
-        };
-        combo_fn_layer {
-            timeout-ms = <40>;
-            key-positions = < 38 39 >;
-            bindings = <&mo FN>;
         };
     };
 
     behaviors {
-        hml: home_row_mod_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 >; // List of keys on the right side of the keyboard
-            hold-trigger-on-release;
+
+        hrm: homerow_mods {
+           compatible = "zmk,behavior-hold-tap";
+           #binding-cells = <2>;
+           tapping-term-ms = <250>;
+           quick-tap-ms = <0>;
+           flavor = "tap-preferred";
+           bindings = <&kp>, <&kp>;
+
         };
-        hmr: home_row_mod_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 >; // List of keys on the left side of the keyboard
-            hold-trigger-on-release;
-        };
+
     };
+
 
     keymap {
         compatible = "zmk,keymap";
 
         ALPHA_layer {
-            display-name = "ALPHA";  
+            display-name = "-ATAR-";  
             bindings = <
-                &kp Q      &kp Q      &kp W        &kp E        &kp R         &kp T       &kp Y      &kp U         &kp I        &kp O        &kp P     &kp BSPC
-                &kp A      &kp A      &hml LGUI S  &hml LALT D  &hml LCTRL F  &kp G       &kp H      &hmr RCTRL J  &hmr RALT K  &hmr RGUI L  &kp SEMI  &kp QUOT
-                &kp LSHFT  &kp LSHFT  &kp X        &kp C        &kp V         &kp B       &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH  &kp CAPS
-                                                   &mkp RCLK    &mkp LCLK     &mo SYMBOL  &kp SPACE  &kp SPACE     &kp SPACE
+                &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T    &kp Y  &kp U  &kp I  &kp O   &kp P    &kp DEL
+                LSHF      &kp A  &kp S  &kp D  &kp F  &kp G    &kp H  &kp J  &kp K  &kp L   &kp SEMI &kp QUOT
+                &kp LCTRL &kp Z  &kp X  &kp C  &kp V  &kp B    &kp N  &kp M  COMM   &kp DOT &kp FSLH &kp RET
+                                 &kp LALT &mo 1 &kp SPC         &kp BSPC  &mo 2  &kp RGUI
+            >;
+        };
+
+        NUMBER_layer {
+            display-name = "NUMBER";  
+            bindings = <
+                &kp ESC &kp N1 &kp N2 &kp N3 &kp N4  &kp N5      &kp N6  &kp N7  &kp N8    &kp N9    &kp N0    &none
+                &mo 3   &kp F1 &kp F2 &kp F3 &kp F4  &kp F5      &kp F6  &none   &kp GRAVE &kp MINUS &kp EQUAL &kp BSLH
+                &none   &kp F7 &kp F8 &kp F9 &kp F10 &kp F11     &kp F12 &mo 3   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
+                                      &none  &none   &none       &none   &mo 4   &none
             >;
         };
 
         SYMBOL_layer {
             display-name = "SYMBOL";  
             bindings = <
-                &trans  &kp N1     &kp N2  &kp N3     &kp N4     &kp N5     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &trans
-                &trans  &kp UNDER  &trans  &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT  &kp APOS  &trans
-                &trans  &trans     &trans  &trans     &kp PLUS   &kp PIPE   &kp STAR  &kp LBKT  &kp RBKT  &trans     &kp BSLH  &trans
-                                           &trans     &trans     &trans     &trans    &trans    &trans
+                &kp ESC &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS &kp STAR  &kp LPAR  &kp RPAR &none
+                &none   &kp INS  &kp HOME PGUP     &none    &kp LBKT     &kp RBKT  &none    &kp TILDE &kp UNDER &kp PLUS &kp PIPE
+                &none   &kp DEL  &kp END  PGDN     &none    &kp LBRC     &kp RBRC  &none    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT 
+                                               &none &mo 4 &none              &none &none &none
             >;
         };
 
-        FN_layer {
-            display-name = "FN";  
+        MOUSE_layer {
+            display-name = "MOUSE";  
             bindings = <
-                &trans  &kp F1  &kp F2  &kp F3        &kp F4      &kp F5        &kp F6        &kp F7      &kp F8        &kp F9   &kp F10   &trans
-                &trans  &trans  &trans  &kp C_BRI_DN  &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &kp C_BRI_UP  &kp F11  &kp F12   &trans
-                &trans  &trans  &trans  &trans        &trans      &trans        &trans        &trans      &trans        &trans   &trans    &trans
-                                        &trans        &trans      &trans        &trans        &trans      &trans
+                &none &none &none &none &none &none       LCK   RCK   &none &none &none &none
+                &none &none &none &none &none &none       MCK   &none &none &none &none &none
+                &none &none &none &none &none &none       &none &none &none &none &none &none  
+                                  &none &none &none       &none &none &none
             >;
         };
+
+        FUNCTION_layer {
+            display-name = "FUNCTION";  
+            bindings = <
+                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4  &none &none &none &none &none &bt BT_CLR
+                &sys_reset  &kp A  &kp B  &kp C  &kp D  &kp E  &none  &none &none &none &none &bt BT_CLR_ALL
+                &none       &none  &none  &none  &none  &none  &none  &none &none &none &none &bootloader
+                                    &none &none &none       &none &none &none
+            >;
+        };
+
+        extra1 {
+            status = "reserved";
+        };
+
+        extra2 {
+            status = "reserved";
+        };
+
+        extra3 {
+            status = "reserved";
+        };
+
+        extra4 {
+            status = "reserved";
+        };
+
     };
 };
