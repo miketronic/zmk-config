@@ -5,15 +5,14 @@ manifest:
     - name: miketronic
       url-base: https://github.com/miketronic
 
-
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-   - name: zmk-keyboards-desolation
-     remote: miketronic
-     revision: v4_wfg
+    - name: zmk-keyboards-desolation
+      remote: miketronic
+      revision: v4_wfg
 
   self:
     path: config
