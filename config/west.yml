@@ -13,7 +13,7 @@ manifest:
       import: app/west.yml
    - name: zmk-keyboards-desolation
      remote: miketronic
-     revision: v4
+     revision: v4_wfg
 
   self:
     path: config
