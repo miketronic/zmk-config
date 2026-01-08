@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/nuovotaka
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: bluedrink9
+      url-base: https://github.com/bluedrink9
 
       
   projects:
@@ -22,8 +24,11 @@ manifest:
     - name: zmk-keyboards-ataraxia
       remote: miketronic
       revision: ataraxia_v2
-    - name: zmk-rgbled-widget
-      remote: caksoylar
+    # - name: zmk-rgbled-widget
+    #   remote: caksoylar
+    #   revision: main
+    - name: zmk-poor-mans-led-indicator
+      remote: bluedrink9
       revision: main
    # - name: zmk-pmw3610-driver-01
    #   remote: miketronic
