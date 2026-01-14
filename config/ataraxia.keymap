@@ -368,11 +368,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-        tog7: toggle_qwerty {
+        tog8: toggle_qwerty {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp X>, <&tog 7>;
+            bindings = <&kp X>, <&tog 8>;
         };
 
     };
@@ -451,7 +451,7 @@
         ALPHA_layer {
             display-name = "-ATAR-";  
             bindings = <
-                &none &none  &kp W &kp F NUMG &code &tog7  &kp M &kp L &kp U  &none &none
+                &none &none  &kp W &kp F NUMG &code &tog8  &kp M &kp L &kp U  &none &none
                 &none &none  MACA  &kp R SYMS &none &none  &kp N &kp E &kp I  &none &none
                 &none &none  FUNC  SNPD  TTB  &none &none  MSEH  &kp O &kp Y   &none &none
                                 &kp TAB LSPC LSPC  RENT   RENT  &kp BSPC
@@ -533,7 +533,7 @@
             bindings = <
                 &kp ESC &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P    &kp BSPC
                 &kp TAB &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L   &kp SEMI &kp QUOT
-                LSHF    &kp Z   &tog7   &kp C   &kp V   &kp B   &kp N   &kp M   COMM    &kp DOT &kp FSLH &kp CAPS
+                LSHF    &kp Z   &tog8   &kp C   &kp V   &kp B   &kp N   &kp M   COMM    &kp DOT &kp FSLH &kp CAPS
                                             &kp TAB LSPC LSPC   RENT    RENT &kp DEL
             >;
         };
