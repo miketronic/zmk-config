@@ -23,7 +23,7 @@ manifest:
       import: app/west.yml
     - name: zmk-keyboards-ataraxia
       remote: miketronic
-      revision: ataraxia_v2
+      revision: ataraxia_v2_wfg
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
