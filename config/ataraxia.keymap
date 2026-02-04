@@ -55,6 +55,13 @@
 #define SNPC   &lt SNIPING C
 #define TOGQ   &tog 7
 
+#define TTB    &lt TBALL T
+#define NUMG   &lt NUMBER G
+#define SYMS   &lt SYMBOL S
+#define FUNC   &lt FUNCTION C
+#define SNPD   &lt SNIPING D
+#define MSEH   &lt MOUSE H
+
 #define LSPC   &mt LSHIFT SPC
 #define RENT   &mt RSHIFT RET
 
@@ -120,6 +127,7 @@
         compatible = "zmk,combos";
         combo_q {
             timeout-ms = <50>;
+            layers = <WFG>;
             key-positions = <2 3>;
             bindings = <&kp Q>;
         };
@@ -127,6 +135,7 @@
         compatible = "zmk,combos";
         combo_b {
             timeout-ms = <50>;
+            layers = <WFG>;
             key-positions = <3 4>;
             bindings = <&kp B>;
         };
@@ -134,6 +143,7 @@
         compatible = "zmk,combos";
         combo_j {
             timeout-ms = <50>;
+            layers = <WFG>;
             key-positions = <7 8>;
             bindings = <&kp J>;
         };
@@ -141,6 +151,7 @@
         compatible = "zmk,combos";
         combo_bspc {
             timeout-ms = <50>;
+            layers = <WFG>;
             key-positions = <8 9>;
             bindings = <&kp BSPC>;
         };
@@ -148,6 +159,7 @@
         compatible = "zmk,combos";
         combo_v {
             timeout-ms = <50>;
+            layers = <WFG>;
             key-positions = <14 15>;
             bindings = <&kp V>;
         };
@@ -155,6 +167,7 @@
         compatible = "zmk,combos";
         combo_p {
             timeout-ms = <50>;
+            layers = <WFG>;
             key-positions = <15 16>;
             bindings = <&kp P>;
         };
@@ -162,6 +175,7 @@
         compatible = "zmk,combos";
         combo_k {
             timeout-ms = <50>;
+            layers = <WFG>;
             key-positions = <19 20>;
             bindings = <&kp K>;
         };
@@ -169,6 +183,7 @@
         compatible = "zmk,combos";
         combo_z {
             timeout-ms = <50>;
+            layers = <WFG>;
             key-positions = <26 27>;
             bindings = <&kp Z>;
         };
@@ -176,12 +191,27 @@
         compatible = "zmk,combos";
         combo_x {
             timeout-ms = <50>;
+            layers = <WFG>;
             key-positions = <27 28>;
             bindings = <&kp X>;
         };
 
         compatible = "zmk,combos";
-        combo_rtcl {
+        combo_lctl {
+            timeout-ms = <100>;
+            key-positions = <2 3 4>;
+            bindings = <&kp LCTRL>;
+        };
+
+        compatible = "zmk,combos";
+        combo_lalt {
+            timeout-ms = <100>;
+            key-positions = <14 15 16>;
+            bindings = <&kp LALT>;
+        };
+
+        compatible = "zmk,combos";
+        combo_rctl {
             timeout-ms = <100>;
             key-positions = <7 8 9>;
             bindings = <&kp RCTRL>;
@@ -197,35 +227,21 @@
         compatible = "zmk,combos";
         combo_dot {
             timeout-ms = <100>;
-            layers = <ALPHA>;
+            layers = <WFG>;
             key-positions = <32 33>;
             bindings = <&kp DOT>;
         };
 
         compatible = "zmk,combos";
-        combo_qmark {
-            timeout-ms = <50>;
-            key-positions = <0 33>;
-            bindings = <&kp QMARK>;
-        };
-
-        compatible = "zmk,combos";
         combo_comma {
             timeout-ms = <100>;
-            layers = <ALPHA>;
+            layers = <WFG>;
             key-positions = <20 21>;
             bindings = <&kp COMMA>;
         };
 
         compatible = "zmk,combos";
-        combo_excl {
-            timeout-ms = <50>;
-            key-positions = <0 21>;
-            bindings = <&kp EXCL>;
-        };
-
-        compatible = "zmk,combos";
-        combo_qmark2 {
+        combo_qmark {
             timeout-ms = <100>;
             layers = <SYMBOL>;
             key-positions = <32 33>;
@@ -233,7 +249,7 @@
         };
 
         compatible = "zmk,combos";
-        combo_excl2 {
+        combo_excl {
             timeout-ms = <100>;
             layers = <SYMBOL>;
             key-positions = <20 21>;
@@ -297,6 +313,19 @@
 
         };
 
+    };
+
+
+    macros {
+
+        code: _code {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE &kp GRAVE>
+                , <&macro_tap &kp LEFT>
+                ;
+        };
     };
 
 
