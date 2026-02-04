@@ -399,7 +399,7 @@
             display-name = "TBALL";  
             bindings = <
                 &none  &none  MCK    RCK    LCK   &none  &none  RSHF   RTCL   KUP   &none TOGQ
-                &none  &none  LSHF   MS_U   MS_D  &none  &none  CPST   &none  KDN   &none &none
+                &none  &none  LSHF   MS_U   MS_D  &none  &none  CPST   &none  KDN   &none &to 7
                 &none  &none  &none  &none  &none &none  &none  &none  &none  &none &none &none  
                               RCK    MCK    LCK                 LCK  MCK  RCK
             >;
@@ -418,8 +418,8 @@
         WFG_layer {
             display-name = "[WFG]";  
             bindings = <
-                &none &none  &kp W &kp F NUMG &none &none  &kp M &kp L &kp U  &none &none
-                &none &none  &kp A &kp R SYMS &none &none  &kp N &kp E &kp I  &none &none
+                &none &none  &kp W &kp F NUMG &none &none  &kp M &kp L &kp U  &none TOGQ
+                &none &none  &kp A &kp R SYMS &none &none  &kp N &kp E &kp I  &none &to 0
                 &none &none  FUNC  SNPD  TTB  &none &none  MSEH  &kp O &kp Y   &none &none
                                 &kp TAB LSPC LSPC  RENT   RENT  &kp BSPC
             >;
