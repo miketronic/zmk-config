@@ -43,6 +43,8 @@
 #define FUNCTION    3
 #define MOUSE       4
 #define TBALL       5
+#define SNIPING     6
+#define WFG         7
 
 #define CPST   &cccv LC(C) LC(V)
 #define ESCFN  &lt FUNCTION ESC
@@ -50,6 +52,8 @@
 #define SYMZ   &lt SYMBOL Z
 #define MMSE   &lt MOUSE M
 #define VBL    &lt TBALL V
+#define SNPC   &lt SNIPING C
+#define TOGQ   &tog 7
 
 #define LSPC   &mt LSHIFT SPC
 #define RENT   &mt RSHIFT RET
@@ -62,6 +66,8 @@
 #define UND     &kp UNDER
 #define MINS    &kp MINUS
 #define UNDS    &kp UNDER
+#define KUP     &kp PG_UP
+#define KDN     &kp PG_DN
 
 #define MM_U &mmv MOVE_UP
 #define MM_D &mmv MOVE_DOWN
@@ -107,9 +113,133 @@
         compatible = "zmk,combos";
         combo_bootloader {
             timeout-ms = <100>;
-            key-positions = <0 11>;
+            key-positions = <2 3 8 9>;
             bindings = <&bootloader>;
         };
+      
+        compatible = "zmk,combos";
+        combo_q {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp Q>;
+        };
+
+        compatible = "zmk,combos";
+        combo_b {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp B>;
+        };
+
+        compatible = "zmk,combos";
+        combo_j {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp J>;
+        };
+
+        compatible = "zmk,combos";
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp BSPC>;
+        };
+
+        compatible = "zmk,combos";
+        combo_v {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp V>;
+        };
+
+        compatible = "zmk,combos";
+        combo_p {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp P>;
+        };
+
+        compatible = "zmk,combos";
+        combo_k {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp K>;
+        };
+
+        compatible = "zmk,combos";
+        combo_z {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp Z>;
+        };
+
+        compatible = "zmk,combos";
+        combo_x {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp X>;
+        };
+
+        compatible = "zmk,combos";
+        combo_rtcl {
+            timeout-ms = <100>;
+            key-positions = <7 8 9>;
+            bindings = <&kp RCTRL>;
+        };
+
+        compatible = "zmk,combos";
+        combo_ralt {
+            timeout-ms = <100>;
+            key-positions = <19 20 21>;
+            bindings = <&kp RALT>;
+        };
+
+        compatible = "zmk,combos";
+        combo_dot {
+            timeout-ms = <100>;
+            layers = <ALPHA>;
+            key-positions = <32 33>;
+            bindings = <&kp DOT>;
+        };
+
+        compatible = "zmk,combos";
+        combo_qmark {
+            timeout-ms = <50>;
+            key-positions = <0 33>;
+            bindings = <&kp QMARK>;
+        };
+
+        compatible = "zmk,combos";
+        combo_comma {
+            timeout-ms = <100>;
+            layers = <ALPHA>;
+            key-positions = <20 21>;
+            bindings = <&kp COMMA>;
+        };
+
+        compatible = "zmk,combos";
+        combo_excl {
+            timeout-ms = <50>;
+            key-positions = <0 21>;
+            bindings = <&kp EXCL>;
+        };
+
+        compatible = "zmk,combos";
+        combo_qmark2 {
+            timeout-ms = <100>;
+            layers = <SYMBOL>;
+            key-positions = <32 33>;
+            bindings = <&kp QMARK>;
+        };
+
+        compatible = "zmk,combos";
+        combo_excl2 {
+            timeout-ms = <100>;
+            layers = <SYMBOL>;
+            key-positions = <20 21>;
+            bindings = <&kp EXCL>;
+        };
+
     };
 
     behaviors {
@@ -176,11 +306,11 @@
 
 
         ALPHA_layer {
-            display-name = "ATARAXIA";  
+            display-name = "[ATAR]";  
             bindings = <
                 ESCFN   &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P    &kp BSPC
                 NTAB    &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L   &kp SEMI &kp QUOT
-                LSHF    SYMZ    &kp X   &kp C   VBL     &kp B   &kp N   MMSE    COMM    &kp DOT &kp FSLH &kp CAPS
+                LSHF    SYMZ    &kp X   SNPC    VBL     &kp B   &kp N   MMSE    COMM    &kp DOT &kp FSLH &kp CAPS
                                 &kp LCTRL &kp LALT LSPC  RENT   &kp RGUI &kp DEL
             >;
         };
@@ -200,9 +330,9 @@
             display-name = "SYMBOL";  
             bindings = <
                 GRV &kp EXCL  &kp AT  &kp HASH  &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp PIPE &none &none
-                GRV &kp TILDE UND     &kp EQUAL &none    &bkt  &brc  &par      &thn   &kp BSLH &none &none
-                LSHF  &none &kp PLUS  &kp MINUS &none    &none &none &kp COLON &trans &kp SEMI RSHF &none
-                                 &kp LCTRL &kp LALT &kp SPACE  &kp RET   &kp RGUI &kp DEL
+                GRV &kp TILDE UND     &kp EQUAL &none    &bkt       &brc  &par      &thn   &kp BSLH &none &none
+                LSHF  &none &kp PLUS  &kp MINUS &none    &none      &none &kp COLON &trans &kp SEMI RSHF &none
+                                 &kp LCTRL &kp LALT LSPC            RENT   &kp RGUI &kp DEL
             >;
         };
 
@@ -210,39 +340,59 @@
             display-name = "NUMBER";  
             bindings = <
                 &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
-                &none &none  &none  &none  &none  &none  &none  &kp N4 &kp N5 &kp N6 &none  &none
-                LSHF  &none  &none  &none  &none  &none  &none &kp N1 &td20 &kp N3 &none  RSHF 
-                                 &kp LCTRL &kp LALT &kp SPACE  &kp RET   &kp RGUI &kp DEL
+                &none &none  &none  &none  &none  &none  &none  &kp N4 &kp N5 &kp N6 &none  &sys_reset
+                LSHF  &none  &none  &none  &none  &none  &none  &kp N1 &td20  &kp N3 &none  RSHF 
+                                 &kp LCTRL &kp LALT LSPC            RENT   &kp RGUI &kp DEL
             >;
         };
 
         FUNCTION_layer {
             display-name = "FUNCTION";  
             bindings = <
-                &none  &none  &none  &none  &none  &none  &none  &none  &none &none &none &bt BT_CLR
-                &none  &none  &none  &none  &none  &none  &none  &none  &none &none &none &sys_reset
-                &bt BT_NXT  &bt BT_PRV  &none  &none  &none  &none  &none  &none  &none &none &studio_unlock &bootloader
-                                 &kp LCTRL &kp LALT &kp SPACE  &kp RET   &kp RGUI &kp DEL
+                &none  &none  CPST     &kp LC(LA(Q)) &kp LC(LA(G))  &none  &none &kp F2 &kp UP   &kp DEL   &none &none
+                &none  &none  &kp TAB  &none  &none  &none  &none   &none  &kp LEFT     &kp DOWN &kp RIGHT &none &none
+                &bt BT_NXT &bt BT_PRV &bt BT_CLR_ALL &none  &none   &none  &kp LC(Z)    &kp DEL  &kp LC(Y) &none &none
+                                 &kp LCTRL &kp LALT LSPC            RENT   &kp RGUI &kp DEL
             >;
         };
 
         MOUSE_layer {
             display-name = "MOUSE";  
             bindings = <
-                &none  &none  &none  &none  &none  &none  &none  MS_U   MM_U   MS_D  &none &none
-                &none  &none  &none  &none  &none  &none  &none  MM_L   MM_D   MM_R  &none &none
-                &none  &none  &none  &none  &none  &none  &none  &none  &none  &none &none &none  
-                                           RCK  MCK  LCK  LCK  MCK  RCK
+                &none &none MS_U  MM_U  MS_D  &none   &none MINS  UNDS  &none &none &none
+                &none &none MM_L  MM_D  MM_R  &none   &none &none &none &none &none &none
+                &none &none MCK   LCK   RCK   &none   &none &none &none &none &none &none  
+                                     MCK  RCK  LCK     MCK  RCK  LCK
             >;
         };
 
         TBALL_layer {
             display-name = "TBALL";  
             bindings = <
-                &none  &none  RCK    MCK    LCK   &none  &none  RSHF   RTCL   &none &none &none
-                &none  &none  LSHF   MS_U   MS_D  &none  &none  CPST   &none  &none &none &none
+                &none  &none  MCK    RCK    LCK   &none  &none  RSHF   RTCL   KUP   &none TOGQ
+                &none  &none  LSHF   MS_U   MS_D  &none  &none  CPST   &none  KDN   &none &none
                 &none  &none  &none  &none  &none &none  &none  &none  &none  &none &none &none  
                               RCK    MCK    LCK                 LCK  MCK  RCK
+            >;
+        };
+
+        SNIPING_layer {
+            display-name = "SNIPE";  
+            bindings = <
+                &none &none MCK   RCK   LCK   &none   &none RSHF  RTCL  KUP    &none &none
+                &none &none LSHF  MS_U  MS_D  &none   &none CPST  &none KDN    &none &none
+                &none &none &none &none &none &none   &none &none &none &none  &none &none  
+                                     RCK  MCK  LCK     LCK  MCK  RCK
+            >;
+        };
+
+        WFG_layer {
+            display-name = "[WFG]";  
+            bindings = <
+                &none &none  &kp W &kp F NUMG &none &none  &kp M &kp L &kp U  &none &none
+                &none &none  MACA  &kp R SYMS &none &none  &kp N &kp E &kp I  &none &none
+                &none &none  FUNC  SNPD  TTB  &none &none  MSEH  &kp O &kp Y   &none &none
+                                &kp TAB LSPC LSPC  RENT   RENT  &kp BSPC
             >;
         };
 
