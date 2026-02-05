@@ -65,6 +65,18 @@
 
 #define LSPC   &mt LSHIFT SPC
 #define RENT   &mt RSHIFT RET
+#define PRN    &mt RPAR LPAR
+#define OCOM   &mt COMMA O
+#define YDOT   &mt DOT Y  
+#define ATH    &mt HASH AT
+#define PIP    &mt AMPS PIPE
+#define PRC    &mt PRCNT DLLR
+#define QOT    &mt DQT SQT
+#define SLS    &mt BSLH FSLH
+#define CLN    &mt SEMI COLON
+#define EQP    &mt PLUS EQUAL
+#define GRTL   &mt GRAVE TILDE
+#define STCT   &mt CARET STAR
 
 #define LSHF    &kp LSHFT
 #define RSHF    &kp RSHFT
@@ -76,6 +88,7 @@
 #define UNDS    &kp UNDER
 #define KUP     &kp PG_UP
 #define KDN     &kp PG_DN
+#define bl      &bootloader
 
 #define MM_U &mmv MOVE_UP
 #define MM_D &mmv MOVE_DOWN
@@ -296,7 +309,7 @@
             bindings = <&kp LT>, <&kp GT>;
         };
 
-qot: tap_dance_quote {
+        qot: tap_dance_quote {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
@@ -427,7 +440,7 @@ qot: tap_dance_quote {
             display-name = "SYMBOL";  
             bindings = <
                 GRV   &kp EXCL  &kp AT    &kp HASH  &kp DLLR &kp PRCNT &kp CARET &kp AMPS  &kp STAR &par &kp MINUS &kp PLUS
-                GRV   &kp TILDE KUP       EQP       &none    &bkt      &brc      CLN       SLS      PIPE &none     &none
+                GRV   &kp TILDE KUP       EQP       &none    &bkt      &brc      CLN       SLS      PIP  &none     &none
                 LSHF  &none     KDN       &none     &none    &none     &none     QOT       ATH      PRC  RSHF      &none
                                  &kp LCTRL &kp LALT LSPC            RENT   &kp RGUI &kp DEL
             >;
