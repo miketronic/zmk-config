@@ -344,6 +344,13 @@
             bindings = <&kp PRCNT>, <&kp DLLR>;
         };
 
+        escw: tap_dance_escw {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp W>, <&kp ESC>;
+        };
+
         hmend: tap_dance_hmend {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -354,7 +361,6 @@
         tdW: tap_dance_W {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            layers = <WFG>;
             tapping-term-ms = <240>;
             bindings = <&kp W>, <&kp ESC>;
         };
@@ -418,7 +424,7 @@
         WFG_layer {
             display-name = "[WFG]";  
             bindings = <
-                &none &none  &kp W &kp F NUMG &code &none  &kp M &kp L &kp U  &none TOGQ
+                &none &none  &escw &kp F NUMG &code &none  &kp M &kp L &kp U  &none TOGQ
                 &none &none  &kp A &kp R SYMS &none &none  &kp N &kp E &kp I  &none &to 0
                 &none &none  FUNC  SNPD  TTB  &none &none  MSEH  &kp O &kp Y   &none &none
                                 &kp TAB LSPC LSPC  RENT   RENT  &kp BSPC
