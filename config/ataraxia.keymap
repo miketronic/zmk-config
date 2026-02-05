@@ -465,9 +465,9 @@
         FUNCTION_layer {
             display-name = "FUNCTION";  
             bindings = <
-                &none  &none  CPST     &kp LC(LA(Q)) &kp LC(LA(G))   &none  &none &kp F2 &kp UP   &kp DEL   &none &none
-                &none  &none  &kp TAB  &none  &none  &none   &none   &none  &kp LEFT     &kp DOWN &kp RIGHT &none &none
-                &none  &none  &none    &none  &none                  &none  &kp LC(Z)    &kp DEL  &kp LC(Y) &none &none
+                &none  &none  CPST     &kp LC(LA(Q)) &kp LC(LA(G))   &none    &none  &kp F2   &kp UP   &kp DEL   &none &none
+                &none  &none  &kp TAB  &none  &none  &none                    &none  &kp LEFT &kp DOWN &kp RIGHT &none &none
+                &none  &none  &none    &none  &none  &none                    &none  &kp LC(Z) &kp DEL  &kp LC(Y) &none &none
                                  &kp LCTRL &kp LALT LSPC            RENT   &kp RGUI &kp DEL
             >;
         };
