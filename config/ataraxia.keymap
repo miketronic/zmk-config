@@ -427,7 +427,7 @@ qot: tap_dance_quote {
             display-name = "SYMBOL";  
             bindings = <
                 GRV   &kp EXCL  &kp AT    &kp HASH  &kp DLLR &kp PRCNT &kp CARET &kp AMPS  &kp STAR &par &kp MINUS &kp PLUS
-                GRV   &kp TILDE KUP       EQP       &none    &bkt      &brc      CLN       SLS      PIP  &none     &none
+                GRV   &kp TILDE KUP       EQP       &none    &bkt      &brc      CLN       SLS      PIPE &none     &none
                 LSHF  &none     KDN       &none     &none    &none     &none     QOT       ATH      PRC  RSHF      &none
                                  &kp LCTRL &kp LALT LSPC            RENT   &kp RGUI &kp DEL
             >;
