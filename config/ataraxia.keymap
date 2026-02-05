@@ -268,6 +268,13 @@
             bindings = <&kp LBKT>, <&kp RBKT>;
         };
 
+        cln: tap_dance_colon {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp COLON>, <&kp SEMI>;
+        };
+
         brc: tap_dance_brace {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -287,6 +294,56 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LT>, <&kp GT>;
+        };
+
+qot: tap_dance_quote {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp SQT>, <&kp DQT>;
+        };
+
+        sls: tap_dance_slash {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp FSLH>, <&kp BSLH>;
+        };
+
+        pipe: tap_dance_pipe {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp PIPE>, <&kp AMPS>;
+        };
+
+        at: tap_dance_at {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp AT>, <&kp HASH>;
+        };
+
+        perc: tap_dance_perc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp PRCNT>, <&kp DLLR>;
+        };
+
+        hmend: tap_dance_hmend {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp END>, <&kp HOME>;
+        };
+
+        tdW: tap_dance_W {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            layers = <WFG>;
+            tapping-term-ms = <240>;
+            bindings = <&kp W>, <&kp ESC>;
         };
 
         td20: tap_dance_20 {
@@ -348,7 +405,7 @@
         WFG_layer {
             display-name = "[WFG]";  
             bindings = <
-                &none &none  &kp W &kp F NUMG &none &none  &kp M &kp L &kp U  &none TOGQ
+                &none &none  &kp W &kp F NUMG &code &none  &kp M &kp L &kp U  &none TOGQ
                 &none &none  &kp A &kp R SYMS &none &none  &kp N &kp E &kp I  &none &to 0
                 &none &none  FUNC  SNPD  TTB  &none &none  MSEH  &kp O &kp Y   &none &none
                                 &kp TAB LSPC LSPC  RENT   RENT  &kp BSPC
@@ -369,9 +426,9 @@
         SYMBOL_layer {
             display-name = "SYMBOL";  
             bindings = <
-                GRV &kp EXCL  &kp AT  &kp HASH  &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp PIPE &none &none
-                GRV &kp TILDE UND     &kp EQUAL &none    &bkt       &brc  &par      &thn   &kp BSLH &none &none
-                LSHF  &none &kp PLUS  &kp MINUS &none    &none      &none &kp COLON &trans &kp SEMI RSHF &none
+                GRV   &kp EXCL  &kp AT    &kp HASH  &kp DLLR &kp PRCNT &kp CARET &kp AMPS  &kp STAR &par &kp MINUS &kp PLUS
+                GRV   &kp TILDE KUP       EQP       &none    &bkt      &brc      CLN       SLS      PIP  &none     &none
+                LSHF  &none     KDN       &none     &none    &none     &none     QOT       ATH      PRC  RSHF      &none
                                  &kp LCTRL &kp LALT LSPC            RENT   &kp RGUI &kp DEL
             >;
         };
@@ -380,8 +437,8 @@
             display-name = "NUMBER";  
             bindings = <
                 &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
-                &none &none  &none  &none  &none  &none  &none  &kp N4 &kp N5 &kp N6 &none  &sys_reset
-                LSHF  &none  &none  &none  &none  &none  &none  &kp N1 &td20  &kp N3 &none  RSHF 
+                &none &none  &none &none  &none  &none  &none  &kp N4 &kp N5 &kp N6 &none  &sys_reset
+                LSHF  &none  bl  &sys_reset  &none  &none  &none  &kp N1 &td20  &kp N3 &none  RSHF 
                                  &kp LCTRL &kp LALT LSPC            RENT   &kp RGUI &kp DEL
             >;
         };
@@ -389,9 +446,9 @@
         FUNCTION_layer {
             display-name = "FUNCTION";  
             bindings = <
-                &none  &none  CPST     &kp LC(LA(Q)) &kp LC(LA(G))  &none  &none &kp F2 &kp UP   &kp DEL   &none &none
-                &none  &none  &kp TAB  &none  &none  &none  &none   &none  &kp LEFT     &kp DOWN &kp RIGHT &none &none
-                &bt BT_NXT &bt BT_PRV &bt BT_CLR_ALL &none  &none   &none  &kp LC(Z)    &kp DEL  &kp LC(Y) &none &none
+                &none  &none  CPST     &kp LC(LA(Q)) &kp LC(LA(G))   &none  &none &kp F2 &kp UP   &kp DEL   &none &none
+                &none  &none  &kp TAB  &none  &none  &none   &none   &none  &kp LEFT     &kp DOWN &kp RIGHT &none &none
+                &none  &none  &none    &none  &none                  &none  &kp LC(Z)    &kp DEL  &kp LC(Y) &none &none
                                  &kp LCTRL &kp LALT LSPC            RENT   &kp RGUI &kp DEL
             >;
         };
@@ -401,7 +458,7 @@
             bindings = <
                 &none &none MS_U  MM_U  MS_D  &none   &none MINS  UNDS  &none &none &none
                 &none &none MM_L  MM_D  MM_R  &none   &none &none &none &none &none &none
-                &none &none MCK   LCK   RCK   &none   &none &none &none &none &none &none  
+                &none &none MCK   LCK   RCK   &none   &none &none &none &bt BT_NXT &bt BT_PRV &bt BT_CLR_ALL  
                                      MCK  RCK  LCK     MCK  RCK  LCK
             >;
         };
