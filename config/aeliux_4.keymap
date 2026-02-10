@@ -360,10 +360,10 @@
         MOUSE_layer {
             display-name = "MOUSE";  
             bindings = <
-                &none &none MS_U  MM_U  MS_D  &none       &none  MINS   UNDS  &none &studio_unlock &bootloader
+                &none &none MS_U  MM_U  MS_D  &none       &none  MINS   UNDS  &none &none &bootloader
                 &none &none MM_L  MM_D  MM_R  &none       &none  &none  &none &none &none 
-                &none &none MCK   LCK   RCK   &none       &none  &none  &bt BT_NXT &bt BT_PRV &bt BT_CLR_ALL
-                MCK  RCK  LCK                 LSPC        RENT          LCK  MCK  RCK
+                &none &none MCK   RCK   LCK   &none       &none  &none  &bt BT_NXT &bt BT_PRV &bt BT_CLR_ALL
+                MCK  RCK  LCK                 RCK         LCK          LCK  MCK  RCK
             >;
         };
 
