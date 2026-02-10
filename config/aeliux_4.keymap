@@ -30,7 +30,7 @@
 
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 500
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 40
 
 #include <behaviors.dtsi>
 #include <input/processors.dtsi>
@@ -103,8 +103,8 @@
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
-    time-to-max-speed-ms = <200>;
-    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <2>;
 };
 
 &mt {
