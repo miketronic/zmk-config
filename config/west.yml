@@ -1,5 +1,5 @@
 #
-# For Aeliux_v4
+# Aeliux_v4
 #
 
 manifest:
@@ -10,14 +10,20 @@ manifest:
       url-base: https://github.com/bluedrink9
     - name: miketronic
       url-base: https://github.com/miketronic
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+      
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-poor-mans-led-indicator
-      remote: bluedrink9
+    - name: zmk-rgbled-widget
+      remote: caksoylar
       revision: main
+    # - name: zmk-poor-mans-led-indicator
+    #   remote: bluedrink9
+    #   revision: main
     - name: zmk-keyboards-aeliux_4
       remote: miketronic
       revision: main
