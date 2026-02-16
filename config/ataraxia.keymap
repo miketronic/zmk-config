@@ -448,7 +448,7 @@
         compatible = "zmk,keymap";
 
         ALPHA_layer {
-            display-name = "-ATAR-";  
+            display-name = "[ATAR]";  
             bindings = <
                 &none &none  &kp W &kp F NUMG &code &tog7  &kp M &kp L &kp U  &none &none
                 &none &none  MACA  &kp R SYMS &none &none  &kp N &kp E &kp I  &none &none
