@@ -26,7 +26,7 @@ manifest:
       revision: ataraxia_v2
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: main
+      revision: v0.3-branch
    # - name: zmk-poor-mans-led-indicator
    #   remote: bluedrink9
    #   revision: main
