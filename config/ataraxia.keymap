@@ -106,7 +106,7 @@
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
-    time-to-max-speed-ms = <200>;
+    time-to-max-speed-ms = <400>;
     acceleration-exponent = <1>;
 };
 
@@ -437,8 +437,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp GRAVE &kp GRAVE>
-                , <&macro_tap &kp LEFT>
+                = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>
+                , <&macro_tap &kp ENTER>
                 ;
         };
     };
