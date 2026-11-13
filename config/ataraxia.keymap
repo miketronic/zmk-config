@@ -24,7 +24,7 @@
 
 
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 500
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 400
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 150
 
 #include <behaviors.dtsi>
@@ -101,7 +101,7 @@
 &mmv_input_listener {
         standard {
             layers = <MOUSE>;
-            input-processors = <&zip_xy_scaler 3 1>;
+            input-processors = <&zip_xy_scaler 2 1>;
         };
 };
 
