@@ -108,8 +108,8 @@
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
-    time-to-max-speed-ms = <400>;
-    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <.5>;
 };
 
 &mt {
@@ -484,7 +484,7 @@
             bindings = <
                 &none &none MS_U  MM_U  MS_D  &none   &none MINS  UNDS  &none &none &none
                 &none &none MM_L  MM_D  MM_R  &none   &none &none &none &none &none &none
-                &none &none MCK   LCK   RCK   &none   &none &none &none &none &none &none  
+                &none &none MCK   RCK   LCK   &none   &none &none &none &none &none &none  
                                      MCK  RCK  LCK     MCK  RCK  LCK
             >;
         };
